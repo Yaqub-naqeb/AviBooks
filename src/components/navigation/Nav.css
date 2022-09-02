@@ -1,0 +1,18 @@
+@media(max-width:768px){
+    .con{
+        display: block;
+    }
+    .contnav{
+        display: hidden;
+        z-index: 1 !important;
+    }
+    .btn{
+        display: block;
+z-index: 100;
+background: white;
+    }
+    .desc{
+        display: none;
+    }
+
+}

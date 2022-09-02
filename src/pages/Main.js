@@ -5,7 +5,7 @@ import {
     BrowserRouter as Router,
     Routes,
     Route,
-  } from "react-router-dom";
+  HashRouter} from "react-router-dom";
 import Navbar from '../components/navigation/Navbar';
 import CardInfo from '../components/cards/CardInfo';
 import Login from './form/Login';
@@ -13,22 +13,32 @@ import Login from './form/Login';
 const Main = () => {
   return (
     <div>
-       <Router>
-       <Navbar/>
-  <Routes>
+
+<HashRouter> 
+<Navbar/>
+       
+<Home/>
+<Library />
+
+
+
+
+ {/* <Routes>
+   <Route path='/CardInfo/:id'  element={<CardInfo/>} />
+     </Routes> */}
+
+
+
+
     
-    <Route path='/' element={<Home/>}/>
-
-    <Route path='/' element={<Library/>}/>
-    <Route path='/CardInfo/:id' element={<CardInfo/>} />
 
 
 
-    
-      </Routes>
-      <Login/>
+{/* 
+ {/* </HashRouter>  */}
 
- </Router>
+
+ </HashRouter>
 
     </div>
   )

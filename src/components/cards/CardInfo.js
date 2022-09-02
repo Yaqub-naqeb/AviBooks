@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch';
 import Icon from '../imgs/book.png'
+import { Link } from 'react-router-dom';
 const CardInfo = () => {
     const {id}=useParams();
  
@@ -10,7 +11,6 @@ const CardInfo = () => {
     const url = `https://www.googleapis.com/books/v1/volumes/${id.replace(":","")}?key=AIzaSyBLmw55bH-rB7hKD-CPJPvlTI0LtQ5tAK8`;
     
       const { data} = useFetch(url);
-
   return (
 <div className='bg-[#1A195F]  h-[100vh] pt-[3rem]  overflow-x-hidden'>
 
@@ -23,10 +23,10 @@ const CardInfo = () => {
 
 
 
-<div className='bg-[#fff] flex flex-col align-middle justify-center  w-[20rem] h-[100vh] absolute left-5 top-0'>
+<div  className='bg-[#fff] flex flex-col align-middle justify-center  w-[20rem] h-[100vh] absolute left-5 top-0'>
 
 <div className=' absolute top-4 left-2'>
-<img src={Icon} alt="" className='ml-8  w-[3rem]' />
+<Link to='/'><img src={Icon} alt="" className='ml-8  w-[3rem]' /></Link>
 <p className='text-[#1a195f] text-[1.3rem] font-[700]'>AVIBOOKS</p>
 </div>
 
