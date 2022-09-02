@@ -8,6 +8,7 @@ import {
   } from "react-router-dom";
 import Navbar from '../components/navigation/Navbar';
 import CardInfo from '../components/cards/CardInfo';
+import Login from './form/Login';
   
 const Main = () => {
   return (
@@ -18,14 +19,17 @@ const Main = () => {
     
     <Route path='/' element={<Home/>}/>
 
-    <Route path='/library' element={<Library/>}/>
+    <Route path='/' element={<Library/>}/>
     <Route path='/CardInfo/:id' element={<CardInfo/>} />
 
 
 
     
       </Routes>
+      <Login/>
+
  </Router>
+
     </div>
   )
 }

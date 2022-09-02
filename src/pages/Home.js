@@ -41,7 +41,9 @@ const Home = () => {
    
     
     </div>
-    <Library/>
+   <div className='bg-[#1A195F]'>
+   <Library/>
+   </div>
     </div>
    
   )

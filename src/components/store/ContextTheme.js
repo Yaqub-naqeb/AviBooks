@@ -7,7 +7,10 @@ const themeReducer = (state, action) => {
     case "CHANGE_MODE":
       return { ...state, mode: action.payload };
 case'CHANGE_SEARCH':
-return {...state,search:action.payload}
+return {...state,search:action.payload};
+case'CHANGE_NUMBOOKS':
+return{...state,book:action.payload};
+
       default:
       return state;
 
@@ -18,7 +21,8 @@ export function ContextTheme(props) {
   const [state, distpatch] = useReducer(themeReducer, {
    
     mode: "bg-gray-900",
-search:'new'
+search:'books',
+book:12
    
   });
 
@@ -32,6 +36,11 @@ const searchBooks=(search)=>{
     distpatch({ type: "CHANGE_SEARCH", payload: search });
 
 }
+// Number of books 
+
+const NumBooks=(book)=>{
+  distpatch({type:'CHANGE_NUMBOOKS',payload:book});
+}
 
 
 
@@ -42,7 +51,7 @@ const searchBooks=(search)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state, colorMode,searchBooks}}>
+    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks}}>
       {props.children}
     </themeContext.Provider>
   );

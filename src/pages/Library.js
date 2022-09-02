@@ -1,22 +1,29 @@
 import  useTheme  from '../components/store/useTheme';
 import React from 'react'
+import '.././App.css'
 import Cards from '../components/cards/Cards';
 import { useFetch } from '../components/hooks/useFetch';
 import Searchbar from '../components/searchbar/Searchbar'
 const Library = () => {
-    const {search}=useTheme();
-console.log(search);
-    // const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}&key=AIzaSyB7HQMPsqL4arih1btaqOyyGR20PCtIVrQ`)
-    const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}+terms
+    const {search,book,NumBooks}=useTheme();
+  
+    
+    const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}+terms&maxResults=${book}
     `)
+  
+
 
 
   return (
-    <div className='p-[8rem] flex flex-col gap-16' id='hello'>
+    <div className='p-[10rem] relative bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' id='hello'>
      <Searchbar/>
 
      {data && <Cards data={data}/>}
 
+
+<button onClick={()=>NumBooks(book+12)} className={' font-medium text-[#ffff] text-[1.4rem] text-center cursor-pointer w-fit lg:ml-[50%] ml-[35%] translate-y-[-6rem]  h-fit'}>see more 
+<p className='mt-[-1rem] text-white '>. . .</p>
+</button>
 
     
 
