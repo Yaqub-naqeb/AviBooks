@@ -16,26 +16,21 @@ const Main = () => {
 
 <HashRouter> 
 <Navbar/>
-       
+
+   
 <Home/>
 <Library />
-
-
-
-
- <Routes>
-   <Route path='/CardInfo/:id'  element={<CardInfo/>} />
-     </Routes>
-
-
+{/* <Login/> */}
+<Routes>
+   <Route path='/cardinfo/:id'  element={<CardInfo/>} />
+   </Routes>
+{/* <CardInfo /> */}
 
 
     
 
 
 
-{/* 
- {/* </HashRouter>  */}
 
 
  </HashRouter>

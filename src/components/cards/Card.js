@@ -4,14 +4,7 @@ import {FavoriteBorderSharp } from '@mui/icons-material'
 import '../../App.css'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
-import { useNavigate } from 'react-router-dom';
 export default function ActionAreaCard(item) {
-
-  const Navigate=useNavigate('');
-
-    
-console.log(item);
-
 
 
 //image url
@@ -26,12 +19,9 @@ let id=item.item.id;
  
 
   return (
-    <div id={id}>
+    <div >
     {/*card*/}
 <div className='  card w-[15rem] relative h-[18rem]   mb-10 '>
-
-
-
 
 {/* img */}
 <div>
@@ -46,9 +36,11 @@ let id=item.item.id;
  className='  hide  opacity-[0]  w-[12rem] h-[16rem]  absolute  left-6 top-[-2rem]   '>
 
 {/* /cardinfo/${id} */}
-<Link  to={`/cardinfo/${id}`} className={'absolute left-7 top-[40%] font-medium'}>
-Explore The Book 
-</Link>
+
+<HashLink  to={`/cardinfo/${id}`} smooth  className={'absolute left-7 top-[40%] font-medium'}>
+ Explore The Book
+ </HashLink>
+ 
 
 
 

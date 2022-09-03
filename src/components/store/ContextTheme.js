@@ -22,8 +22,8 @@ export function ContextTheme(props) {
    
     mode: "bg-gray-900",
 search:'books',
-book:12
-   
+book:12,
+idd:'',
   });
 
 
@@ -42,6 +42,10 @@ const NumBooks=(book)=>{
   distpatch({type:'CHANGE_NUMBOOKS',payload:book});
 }
 
+//
+const ID=(idd)=>{
+  distpatch({type:'CHANGE_ID',payload:idd});
+}
 
 
 
@@ -51,7 +55,7 @@ const NumBooks=(book)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks}}>
+    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,ID}}>
       {props.children}
     </themeContext.Provider>
   );

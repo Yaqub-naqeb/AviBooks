@@ -56,12 +56,20 @@ SignUp
 
 <ul className='flex flex-col gap-5  justify-center align-middle text-center mt-[12%] font-semibold text-[poppins]'>
  <li> <HashLink smooth to={'#home'}
-   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Home</HashLink> </li>
 
- >Home</HashLink> </li>
- <li> <HashLink smooth to="#lb"
-  scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+ <li> <HashLink smooth to="#library"
+  scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
  >Library</HashLink> </li>
+
+ <li> <HashLink smooth to="#login"
+  scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
+ >Log in</HashLink> </li>
+
+
+ <li> <HashLink smooth to="#signup"
+  scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
+ >Sign Up</HashLink> </li>
 </ul>
 
 </div>

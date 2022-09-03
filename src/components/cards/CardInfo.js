@@ -5,19 +5,18 @@ import Icon from '../imgs/book.png'
 import { Link } from 'react-router-dom';
 const CardInfo = () => {
     const {id}=useParams();
- 
 
-
-    const url = `https://www.googleapis.com/books/v1/volumes/${id.replace(":","")}?key=AIzaSyBLmw55bH-rB7hKD-CPJPvlTI0LtQ5tAK8`;
+// .replace(":","")
+    const url = `https://www.googleapis.com/books/v1/volumes/${id}?key=AIzaSyBLmw55bH-rB7hKD-CPJPvlTI0LtQ5tAK8`;
     
       const { data} = useFetch(url);
   return (
-<div  className='bg-[#1A195F]  h-[100vh] pt-[3rem]  overflow-x-hidden'>
+<div id={`${id}`}  className='bg-[#1A195F]  h-[100vh] pt-[3rem]  overflow-x-hidden'>
 
 
-
-
-    <div className='   flex gap-20  pt-[8rem] align-middle justify-center '>
+    <div
+    
+     className='   flex gap-20  pt-[8rem] align-middle justify-center '>
       
 {/* img */}
 
@@ -42,13 +41,14 @@ const CardInfo = () => {
 
 
 {/* info */}
-<div className='  px-[23rem] '>
+<div    className='  px-[23rem] '>
 
   {data && <div className=' '>
 
 <div className='flex flex-col gap-3 '>
 
-<div className='text-[2rem] text-[#ffff] font-medium'>{data.volumeInfo.title}</div>
+<div className='text-[2rem] text-[#ffff] font-medium'>{
+data.volumeInfo.title}</div>
 
 
  {data.volumeInfo.authors && <p> <strong className='text-[#ffffffe1]'>Author:</strong> <span className='text-[#ffffff89]'>{data.volumeInfo.authors}</span> </p>}
