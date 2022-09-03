@@ -23,9 +23,9 @@ const Main = () => {
 
 
 
- {/* <Routes>
+ <Routes>
    <Route path='/CardInfo/:id'  element={<CardInfo/>} />
-     </Routes> */}
+     </Routes>
 
 
 

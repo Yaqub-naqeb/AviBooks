@@ -12,7 +12,7 @@ const CardInfo = () => {
     
       const { data} = useFetch(url);
   return (
-<div className='bg-[#1A195F]  h-[100vh] pt-[3rem]  overflow-x-hidden'>
+<div  className='bg-[#1A195F]  h-[100vh] pt-[3rem]  overflow-x-hidden'>
 
 
 

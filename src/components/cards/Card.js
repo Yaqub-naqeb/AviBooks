@@ -46,9 +46,9 @@ let id=item.item.id;
  className='  hide  opacity-[0]  w-[12rem] h-[16rem]  absolute  left-6 top-[-2rem]   '>
 
 {/* /cardinfo/${id} */}
-<HashLink  onClick={()=>Navigate({hash:`/cardinfo/#${id}`})} className={'absolute left-7 top-[40%] font-medium'}>
+<Link  to={`/cardinfo/${id}`} className={'absolute left-7 top-[40%] font-medium'}>
 Explore The Book 
-</HashLink>
+</Link>
 
 
 
