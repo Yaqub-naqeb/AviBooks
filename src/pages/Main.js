@@ -9,31 +9,28 @@ import {
 import Navbar from '../components/navigation/Navbar';
 import CardInfo from '../components/cards/CardInfo';
 import Login from './form/Login';
+import useTheme from '../components/store/useTheme';
   
 const Main = () => {
+
+const {idd,ID}=useTheme();
+console.log(idd);
   return (
     <div>
+      
 
-<HashRouter> 
+<Router> 
+
+
 <Navbar/>
 
-   
-<Home/>
-<Library />
-{/* <Login/> */}
-<Routes>
-   <Route path='/cardinfo/:id'  element={<CardInfo/>} />
-   </Routes>
-{/* <CardInfo /> */}
+ <Routes>
+  <Route path='/' element={<Home/>}/>
+  <Route path='/library' element={<Library/>}/>
+  <Route path='/cardinfo/:id'  element={<CardInfo/>} />
+  </Routes> 
 
-
-    
-
-
-
-
-
- </HashRouter>
+ </Router>
 
     </div>
   )

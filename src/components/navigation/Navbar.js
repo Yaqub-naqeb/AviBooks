@@ -1,5 +1,6 @@
+
 import React, { useState } from 'react'
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 import {HashLink } from 'react-router-hash-link';
 import './Nav.css'
 const Navbar = () => {
@@ -18,10 +19,18 @@ const [open,setOpen]=useState(true);
       bg-[#ffff] text-[#1a195f]
       font-medium w-[30rem] text-[20px]'>
 <div className='  flex gap-4 w-full ml-[15%]'>
-<HashLink smooth to={'#home'} >
+<NavLink
+
+style={ ({isActive})=>{
+  return isActive ? {scale:'1.2' }:{}
+}  }
+
+
+
+smooth to={'/'} >
 Home
-</HashLink>
-<HashLink smooth to={'#library'}>
+</NavLink>
+<HashLink smooth to={'/library'}>
 Library
 </HashLink>
 <HashLink smooth to={'#login'}>

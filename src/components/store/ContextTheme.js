@@ -23,7 +23,7 @@ export function ContextTheme(props) {
     mode: "bg-gray-900",
 search:'books',
 book:12,
-idd:'',
+idd:'false',
   });
 
 
