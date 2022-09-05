@@ -39,8 +39,8 @@ const signInWithGoogle=()=>{
         
         <div className='absolute top-[30%] text-center lg:left-[4rem] text-[#fffffff0] flex flex-col gap-7
         '>
-            <h1 className=' lg:text-[3rem] lg:font-semibold md:text-[3.5rem] text-[2rem]  font-medium '>Welcome</h1>
-            <p className='tracking-wider md:text-[2rem] text-[1rem]'>Books Make Greate Persons</p>
+            <h1 className=' lg:text-[3rem] lg:font-semibold md:text-[3.5rem] text-[2rem]  font-medium '>Glad To see you </h1>
+            <p className='tracking-wider md:text-[2rem] text-[1rem]'>You can find awsome books</p>
             <button className='bg-tranparent w-[8rem]  p-1 m-2  mx-auto text-[#ffffff] font-medium rounded-full  border-solid border-2 border-[#ffffff] hover:text-[#1A195F] hover:bg-[#ffff] transition-all duration-300' onClick={()=>Navigate('/signup')}>Sign Up</button>
         </div>
     
@@ -66,7 +66,7 @@ const signInWithGoogle=()=>{
    {/*  */}
    
    <div className='pt-[10rem] ml-1 flex flex-col lg:gap-9 gap-5  text-center'>
-       <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Create an account</h1>
+       <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Log in to avibooks</h1>
    {/* Socials */}
    
        <div className='flex w-full align-middle justify-center
