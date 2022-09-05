@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import Library from './Library'
+import SignUp from '../pages/form/SignUp'
 import {
     BrowserRouter as Router,
     Routes,
@@ -13,8 +14,8 @@ import useTheme from '../components/store/useTheme';
   
 const Main = () => {
 
-const {idd,ID}=useTheme();
-console.log(idd);
+// const {idd,ID}=useTheme();
+// console.log(idd);
   return (
     <div>
       
@@ -28,6 +29,8 @@ console.log(idd);
   <Route path='/' element={<Home/>}/>
   <Route path='/library' element={<Library/>}/>
   <Route path='/cardinfo/:id'  element={<CardInfo/>} />
+  <Route path='/signup' element={<SignUp/>}/>
+  <Route path='/login' element={<Login/>}></Route>
   </Routes> 
 
  </Router>

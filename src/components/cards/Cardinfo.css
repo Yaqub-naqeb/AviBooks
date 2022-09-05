@@ -1,0 +1,12 @@
+
+
+
+
+@media (max-width:768px) {
+    .pc{
+        display: none;
+    }
+    .mb{
+        display: block;
+    }
+}

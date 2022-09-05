@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import {HashLink } from 'react-router-hash-link';
 import './Nav.css'
@@ -15,7 +16,7 @@ const [open,setOpen]=useState(true);
         {/* desctop */}
 
 
-      <div className='desc z-50 p-3 rounded-full absolute  right-[15%] top-[36px] 
+      <div className='desc z-50 p-3 rounded-full absolute  right-[4%] top-[36px] 
       bg-[#ffff] text-[#1a195f]
       font-medium w-[30rem] text-[20px]'>
 <div className='  flex gap-4 w-full ml-[15%]'>
@@ -33,12 +34,12 @@ Home
 <HashLink smooth to={'/library'}>
 Library
 </HashLink>
-<HashLink smooth to={'#login'}>
+<HashLink smooth to={'/login'}>
 Login
 </HashLink>
-<HashLink smooth to={'#signup'}>
+<Link  to={'/signup'}>
 SignUp
-</HashLink>
+</Link>
 
 </div>
 
@@ -48,8 +49,8 @@ SignUp
 
 
 
-<div className='hidden con '>
-<button className='mob  hidden btn absolute right-4 top-4  ' onClick={()=>setOpen(!open)}>
+<div className='hidden con  z-50  '>
+<button className='mob  hidden btn absolute  right-4 top-4  ' onClick={()=>setOpen(!open)}>
   { open ?
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
   <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -60,23 +61,23 @@ SignUp
 </button>
 
 {/* div batar */}
-      <div className={`contnav ${open ? 'hidden' : '' } w-full bg-white h-[50vh] absolute`}>
+      <div className={`contnav  ${open ? 'hidden' : '' } w-full bg-white h-[50vh] absolute`}>
 
 
 <ul className='flex flex-col gap-5  justify-center align-middle text-center mt-[12%] font-semibold text-[poppins]'>
- <li> <HashLink smooth to={'#home'}
-   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}>Home</HashLink> </li>
+ <li> <HashLink className='z-50' smooth to={'/'}
+   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'start' })}>Home</HashLink> </li>
 
- <li> <HashLink smooth to="#library"
+ <li> <HashLink smooth to="/library"
   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
  >Library</HashLink> </li>
 
- <li> <HashLink smooth to="#login"
+ <li> <HashLink smooth to="/login"
   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'start' })}
  >Log in</HashLink> </li>
 
 
- <li> <HashLink smooth to="#signup"
+ <li> <HashLink smooth to="/signup"
   scroll={(el) => el.scrollIntoView({ behavior: 'auto', block: 'end' })}
  >Sign Up</HashLink> </li>
 </ul>

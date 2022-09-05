@@ -10,7 +10,10 @@ case'CHANGE_SEARCH':
 return {...state,search:action.payload};
 case'CHANGE_NUMBOOKS':
 return{...state,book:action.payload};
-
+case 'CHANGE_PASSWORD':
+return {...state,pass:action.payload};
+case 'CHANGE_EMAIL':
+return {...state,em:action.payload};
       default:
       return state;
 
@@ -23,7 +26,9 @@ export function ContextTheme(props) {
     mode: "bg-gray-900",
 search:'books',
 book:12,
-idd:'false',
+pass:'',
+em:'',
+nm:''
   });
 
 
@@ -43,9 +48,19 @@ const NumBooks=(book)=>{
 }
 
 //
-const ID=(idd)=>{
-  distpatch({type:'CHANGE_ID',payload:idd});
+const Password=(pass)=>{
+  distpatch({type:'CHANGE_PASSWORD',payload:pass});
 }
+//
+const Email=(em)=>{
+  distpatch({type:'CHANGE_PASSWORD',payload:em});
+}
+//
+const Name=(nm)=>{
+  distpatch({type:'CHANGE_NAME',payload:nm});
+}
+//
+
 
 
 
@@ -55,7 +70,7 @@ const ID=(idd)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,ID}}>
+    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,Password,Email,Name}}>
       {props.children}
     </themeContext.Provider>
   );
