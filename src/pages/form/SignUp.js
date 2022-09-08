@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../../components/imgs/book.png'
 
 import Facebook from '../../components/imgs/social/facebook.png'
 import LinkedIn from '../../components/imgs/social/linkedin.png'
 import Google from '../../components/imgs/social/google-plus.png'
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth'
 import { auth } from '../../components/firebase/Configure'
 import useTheme from '../../components/store/useTheme'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
@@ -18,9 +18,44 @@ import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
 
-    const {em,Email,Password,pass,Name,nm}=useTheme();
-const Navigate=useNavigate();
-
+    const Navigate=useNavigate('');
+    const [email,setEmail]=useState('');
+    const [password,setPassword]=useState();
+    const [fullName,setFullName]=useState('');
+    const [user,setUser]=useState({
+    });
+  
+    // to sign out
+  
+    const signout=async()=>{
+      signOut(auth)
+    }
+  
+  
+  onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)})
+  
+  const Regster=async()=>{
+  
+  
+    try{
+      
+      
+      const user=await createUserWithEmailAndPassword(auth,email,password,fullName)
+  
+  
+      setEmail('');
+  setPassword('');
+  setFullName('');
+    console.log(user);
+    }catch(err){
+  console.log(err.message);
+  
+  
+  
+    }
+  
+  
+  }
     const signInWithGoogle=()=>{
         const Provider=new GoogleAuthProvider();
         signInWithPopup(auth,Provider).then((re)=>{
@@ -32,34 +67,23 @@ const Navigate=useNavigate();
     }
 
 
+    
+
+    
+       
+    
+
+
     // 
 
 
-const subHandler=(e)=>{
-e.PreventDefault();
+// const subHandler=(e)=>{
+// e.preventDefault();
+//   Email('');
+//   Password('');
+//   Name('');
 
-
-const auth = getAuth();
-createUserWithEmailAndPassword(auth, em, pass)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
-    console.log(user);
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-
-  console.log(em,pass,nm);
-
-  Email('');
-  Password('');
-  Name('');
-
-}
+// }
 
 
 
@@ -97,12 +121,12 @@ createUserWithEmailAndPassword(auth, em, pass)
 
 
 {/* inputs */}
-<form onSubmit={subHandler} className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
-   <input value={nm} type="text" onChange={(e)=>Name(e.target.value)} placeholder='User name' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-   <input value={em} type="email" onChange={(e)=>Email(e.target.value)}  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-   <input value={pass} type="password" onChange={(e)=>Password(e.target.value)}  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+<form className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
+   <input  type="text" onChange={(e)=>setFullName(e.target.value)} placeholder='User name' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+   <input  type="email" onChange={(e)=>setEmail(e.target.value)}  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+   <input   type="password" onChange={(e)=>setPassword(e.target.value)}  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
 
-   <button  className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'>Sign Up</button></form>
+   <button  className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={Regster}>Sign Up</button></form>
 
 </div>
 

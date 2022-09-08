@@ -21,7 +21,7 @@ let id=item.item.id;
   return (
     <div >
     {/*card*/}
-<div className='  card w-[15rem] relative h-[18rem]   mb-10 '>
+<div className='  card w-[15rem] relative h-[19rem]  mb-10 '>
 
 {/* img */}
 <div>

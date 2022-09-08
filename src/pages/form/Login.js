@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
 import Facebook from '../../components/imgs/social/facebook.png'
@@ -6,13 +6,48 @@ import LinkedIn from '../../components/imgs/social/linkedin.png'
 import Google from '../../components/imgs/social/google-plus.png'
 
 import {auth} from '../../components/firebase/Configure'
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 
 
+
 const Login = () => {
-    const Navigate=useNavigate();
-    
+
+    const Navigate=useNavigate('');
+    const [email,setEmail]=useState('');
+    const [password,setPassword]=useState();
+    const [user,setUser]=useState({
+    });
+console.log(user);
+
+    onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)})
+  
+  const log=async()=>{
+  
+  
+    try{
+      
+      
+      const user=await signInWithEmailAndPassword(auth,email,password)
+  
+  
+      setEmail('');
+  setPassword('');
+    console.log(user);
+    }catch(err){
+  console.log(err.message);
+  
+  
+  
+    }
+  
+  
+  }
+      
+
+
+
+    //google
 const signInWithGoogle=()=>{
     const Provider=new GoogleAuthProvider();
     signInWithPopup(auth,Provider).then((re)=>{
@@ -22,7 +57,7 @@ const signInWithGoogle=()=>{
     })}
 
 
-    return (
+  return (
         <div>
     {/* All */}
     <div className='flex bg-gray-500 h-[100vh] w-[full]'>
@@ -83,10 +118,10 @@ const signInWithGoogle=()=>{
    {/* inputs */}
    <form className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
      
-      <input type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-      <input type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+      <input onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+      <input onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
    
-      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' >Log In</button></form>
+      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={log}>Log In</button></form>
    
    </div>
    

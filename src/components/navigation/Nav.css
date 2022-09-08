@@ -19,3 +19,13 @@ background: white;
     }
 
 }
+
+.underline{
+font-weight: 800;
+    color:#2321a1db;
+    text-decoration: none; 
+}
+
+/* .active{
+    text-decoration: underline;
+} */
