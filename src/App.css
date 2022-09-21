@@ -38,4 +38,8 @@ width: 12rem;
   
   
   }
+  .botn:hover .sp{
+    right: 8px;
+    transition: all .2s ease-in;
+  }
 

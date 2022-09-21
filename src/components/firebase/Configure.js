@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {createUserWithEmailAndPassword, getAuth}from 'firebase/auth';
+import { getAuth}from 'firebase/auth';
 import useTheme from "../store/useTheme";
 
 const firebaseConfig = {
@@ -14,19 +14,8 @@ const firebaseConfig = {
 // Initialize Firebase 
 const app = initializeApp(firebaseConfig);
 export const auth=getAuth(app);
-// createUserWithEmailAndPassword(auth, em, pass)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-// alert('created')    // ...
-//   })
-  
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     console.log(errorCode);
-//     // ..
-//   });
+
+
 
 
 
