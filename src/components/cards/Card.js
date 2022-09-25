@@ -21,7 +21,7 @@ let id=item.item.id;
   return (
     <div >
     {/*card*/}
-<div className='  card w-[15rem] relative h-[19rem]  mb-10 '>
+<div className='  card lg:w-[15rem] relative md:w-[13rem] w-[11.2rem] h-[19rem]  lg:mb-10 md:mb-8  '>
 
 {/* img */}
 <div>
@@ -29,7 +29,11 @@ let id=item.item.id;
 <div>
 
 
-  <img src={image} alt="" className='absolute w-[12rem] left-6 h-[16rem] top-[-3rem] ' />
+  <img src={image} alt="" className='absolute
+   lg:w-[12rem]  lg:left-6
+   md:w-[11.5rem] md:left-3
+   w-[10.2rem] left-[0.5rem]
+    h-[16rem] top-[-3rem] ' />
 
   {/* hidden */}
   <div

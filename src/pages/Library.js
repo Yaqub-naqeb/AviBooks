@@ -15,13 +15,25 @@ const Library = () => {
 
 
   return (
-    <div id='library' className='   p-[10rem] relative bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
+    <div id='library' className='
+    pt-[10rem]
+   
+  overflow-x-hidden
+    w-[100vw]
+    lg:px-[10rem] 
+    md:px-[5rem]
+    px-[1rem]
+
+    
+    md:pt-[8rem]  lg:p-[10rem] 
+
+    relative bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
      <Searchbar/>
 
      {data && <Cards data={data}/>}
 
 
-<button onClick={()=>NumBooks(book+12)} className={' font-medium text-[#ffff] text-[1.2rem] lg:text-[1.4rem] text-center cursor-pointer lg:w-fit w-full lg:ml-[50%] ml-[5%] translate-y-[-6rem]  h-fit'}>see more 
+<button onClick={()=>NumBooks(book+12)} className={' font-medium text-[#ffff] text-[1.2rem] lg:text-[1.4rem] text-center cursor-pointer lg:w-fit w-full lg:ml-[45%] ml-[0%] translate-y-[-6rem]  h-fit'}>see more 
 <p className='lg:mt-[-1rem] text-white '>. . .</p>
 </button>
 
