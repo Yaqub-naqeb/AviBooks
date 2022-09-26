@@ -90,12 +90,13 @@ const SignUp = () => {
   return (
     <div>
 {/* All */}
-<div className='flex bg-gray-500 h-[100vh] w-[full]'>
+<div className='
+overflow-x-hidden
+flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh] w-[full]'>
     
-
 {/* left */}
 
-<div className='w-full bg-white'>
+<div className='w-full lg:h-[100vh] h-[60%] bg-white'>
    
 
     {/* logo */}
@@ -105,7 +106,7 @@ const SignUp = () => {
 </div>
 {/*  */}
 
-<div className='pt-[10rem] ml-1 flex flex-col lg:gap-9 gap-5  text-center'>
+<div className='lg:pt-[10rem] md:pt-[6rem] pt-[5rem]  flex flex-col lg:gap-9 gap-5  text-center'>
     <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Create an account</h1>
 {/* Socials */}
 
@@ -126,7 +127,7 @@ const SignUp = () => {
    <input  type="email" onChange={(e)=>setEmail(e.target.value)}  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
    <input   type="password" onChange={(e)=>setPassword(e.target.value)}  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
 
-   <button  className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={Regster}>Sign Up</button></form>
+   <button  className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-10 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={Regster}>Sign Up</button></form>
 
 </div>
 
@@ -135,14 +136,14 @@ const SignUp = () => {
 
 {/* Right */}
 
-<div className='w-[71%] relative  h-full
+<div className=' relative w-full lg:h-[100vh]  h-[40%]
 bg-[url("https://keralaacademy.in/wp-content/uploads/2020/05/jaredd-craig-HH4WBGNyltc-unsplash.jpg")]
 
 
 object-cover   bg-cover bg-no-repeat
 '>
     
-    <div className='absolute top-[30%] text-center lg:right-[5rem] text-[#fffffff0] flex flex-col gap-7
+    <div className='absolute top-[30%] text-center lg:right-[5rem] md:right-[5rem] left-[5.5rem] text-[#fffffff0] flex flex-col gap-7
     '>
         <h1 className=' lg:text-[3rem] lg:font-semibold md:text-[3.5rem] text-[2rem]  font-medium '>Welcome</h1>
         <p className='tracking-wider md:text-[2rem] text-[1rem]'>Books Make Greate Persons</p>

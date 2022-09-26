@@ -2,12 +2,17 @@
 
     .con{
         display: block;
+        transition: all 2s ease-in-out;
+        overflow-x: hidden;
+
     }
     .contnav{
-        display: hidden;
+        overflow-x: hidden;
         z-index: 1 !important;
+        
     }
     .btn{
+
 
         display: block;
 z-index: 100;
@@ -18,13 +23,21 @@ background: white;
         display: none;
     }
 
+    .navv {
+        font-weight: 800;
+            color:#2321a1db;
+            text-decoration: none; 
+        }
+        /* .navvv{
+       transition: all 2s ease-in-out;
+         
+        } */
+        
+
 }
 
-.underline{
-font-weight: 800;
-    color:#2321a1db;
-    text-decoration: none; 
-}
+
+
 
 /* .active{
     text-decoration: underline;

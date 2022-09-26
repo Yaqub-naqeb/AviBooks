@@ -17,15 +17,13 @@ const Library = () => {
   return (
     <div id='library' className='
     pt-[10rem]
-   
+   w-full
   overflow-x-hidden
-    w-[100vw]
+   
     lg:px-[10rem] 
-    md:px-[5rem]
+    md:px-[3rem]
     px-[1rem]
-
-    
-    md:pt-[8rem]  lg:p-[10rem] 
+    md:p-[8rem]   lg:p-[10rem] 
 
     relative bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
      <Searchbar/>

@@ -1,7 +1,9 @@
 import React from 'react'
 import '../App.css'
 import Image from '../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
+import { useNavigate } from 'react-router-dom'
 const Home = () => {
+  const Navigate=useNavigate('');
   return (
 
   <div id='home'>
@@ -40,12 +42,19 @@ const Home = () => {
 
 
      <h1 className='
-    absolute lg:right-[20%] lg:left-auto left-3 top-[40%]
+    absolute lg:right-[20%] lg:left-auto md:left-[15%] left-3 top-[40%]
     text-[#ffffffe4] lg:text-[5rem] lg:font-semibold md:text-[3.5rem] text-[2.4rem]  font-bold z-50'>Discover your root...</h1> 
 {/* Botton */}
-
-<button className=' botn absolute  lg:left-[48%] md:left-[10%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[30%] bottom-[42%]
-    text-[#4240AE]  pl-5 pr-10 py-4 bg-white font-bold '>Explore Book <span className='sp'><svg className='absolute sp   right-3 w-5 h-5 top-[1.2rem] ' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" >
+<button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[30%] bottom-[42%]
+    text-[#4240AE]  lg:pl-5 lg:pr-10 lg:py-4
+    
+    md:pl-5 md:pr-10 md:py-4
+    pl-3 pr-8 py-3
+    bg-white font-bold ' onClick={()=>{Navigate('/library')}}>Explore Book <span className='sp'><svg className='absolute sp   right-3
+     lg:w-5 lg:h-5 
+     md:w-5 md:h-5
+     w-4 h-4
+    md:top-[1.2rem] top-[1.1rem] lg:top-[1.2rem] ' xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" >
     <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
   </svg></span>
   </button>
