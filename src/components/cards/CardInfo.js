@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch';
 import Icon from '../imgs/book.png'
+import IconMob from '../imgs/viber_image_2022-08-29_19-29-34-622.png'
 import { Link } from 'react-router-dom';
 import { bgcolor } from '@mui/system';
 import './Cardinfo.css'
@@ -90,9 +91,9 @@ data.volumeInfo.title}</div>
 
 <div className='   mb hidden bg-[#fff] w-full h-full overflow-x-hidden'>
 
-<div className=' absolute pt-4 left-2 bg-white w-full '>
-<Link to='/library'><img src={Icon} alt="" className='ml-8  w-[3rem]' /></Link>
-<p className='text-[#1a195f] text-[1.3rem] font-[700]'>AVIBOOKS</p>
+<div className=' absolute pt-2 pl-2 bg-[#1A195F] w-full '>
+<Link to='/library'><img src={IconMob}  alt="" className='ml-8  w-[2rem]' /></Link>
+<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]'>AVIBOOKS</p>
 </div>
 
 
