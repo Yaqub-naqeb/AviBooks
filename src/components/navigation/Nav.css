@@ -2,12 +2,12 @@
 
     .con{
         display: block;
-        transition: all 2s ease-in-out;
+        /* transition: all 2s ease-in-out; */
         overflow-x: hidden;
 
     }
     .contnav{
-        overflow-x: hidden;
+        overflow: hidden;
         z-index: 1 !important;
         
     }
@@ -16,26 +16,31 @@
 
         display: block;
 z-index: 100;
-background: white;
+background: transparent;
+color: #ffff;
+font-weight: bolder;
     }
     .desc{
 
         display: none;
     }
 
-    .navv {
-        font-weight: 800;
-            color:#2321a1db;
-            text-decoration: none; 
-        }
-        /* .navvv{
-       transition: all 2s ease-in-out;
+         .navvv{
+           
+            text-decoration: underline;
+            text-underline-offset: .3rem;
+
          
-        } */
+        }
         
 
 }
 
+.underline {
+    font-weight: 800;
+        color:#2321a1db;
+        text-decoration: none; 
+    }
 
 
 

@@ -42,14 +42,14 @@ const Home = () => {
 
 
      <h1 className='
-    absolute lg:right-[20%] lg:left-auto md:left-[15%] left-3 top-[40%]
-    text-[#ffffffe4] lg:text-[5rem] lg:font-semibold md:text-[3.5rem] text-[2.4rem]  font-bold z-50'>Discover your root...</h1> 
+    absolute lg:right-[20%] lg:left-auto md:left-[15%] left-[2.4rem] top-[40%]
+    text-[#ffffffe4] lg:text-[5rem] lg:font-semibold md:text-[3.5rem] text-[2.1rem]  font-bold z-50'>Discover your root...</h1> 
 {/* Botton */}
-<button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[30%] bottom-[42%]
+<button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[33%] bottom-[45%]
     text-[#4240AE]  lg:pl-5 lg:pr-10 lg:py-4
     
     md:pl-5 md:pr-10 md:py-4
-    pl-3 pr-8 py-3
+    pl-3 pr-8 py-[0.8rem]
     bg-white font-bold ' onClick={()=>{Navigate('/library')}}>Explore Book <span className='sp'><svg className='absolute sp   right-3
      lg:w-5 lg:h-5 
      md:w-5 md:h-5

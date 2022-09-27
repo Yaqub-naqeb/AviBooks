@@ -60,19 +60,19 @@ const signInWithGoogle=()=>{
   return (
         <div>
     {/* All */}
-    <div className='flex bg-gray-500 h-[100vh] w-[full]'>
+    <div className='flex lg:flex-nowrap md:flex-wrap flex-wrap   h-[100vh] w-[full]'>
         
     
     {/* Right */}
     
-    <div className='w-[71%] relative  h-full
+    <div className='lg:w-[71%] w-[100%]  relative h-[40%] lg:h-full
     bg-[url("https://keralaacademy.in/wp-content/uploads/2020/05/jaredd-craig-HH4WBGNyltc-unsplash.jpg")]
     
     
     object-cover   bg-cover bg-no-repeat
     '>
         
-        <div className='absolute top-[30%] text-center lg:left-[4rem] text-[#fffffff0] flex flex-col gap-7
+        <div className='absolute top-[30%] text-center lg:left-[4rem] md:left-[10rem] left-[5.4rem] text-[#fffffff0] flex flex-col gap-7
         '>
             <h1 className=' lg:text-[3rem] lg:font-semibold md:text-[3.5rem] text-[2rem]  font-medium '>Glad To see you </h1>
             <p className='tracking-wider md:text-[2rem] text-[1rem]'>You can find awsome books</p>
@@ -98,9 +98,9 @@ const signInWithGoogle=()=>{
    <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
-   {/*  */}
+   {/* ///////////////////////////////// */}
    
-   <div className='pt-[10rem] ml-1 flex flex-col lg:gap-9 gap-5  text-center'>
+   <div className='lg:pt-[10rem] md:pt-[0rem] lg:mt-0 md:mt-[-3rem] mt-[-3rem]  flex flex-col lg:gap-9 gap-5  text-center'>
        <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Log in to avibooks</h1>
    {/* Socials */}
    
@@ -121,7 +121,7 @@ const signInWithGoogle=()=>{
       <input onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
       <input onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
    
-      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  mt-  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-2 md:-translate-x-12  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={log}>Log In</button></form>
+      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={log}>Log In</button></form>
    
    </div>
    

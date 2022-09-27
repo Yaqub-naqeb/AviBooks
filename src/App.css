@@ -25,21 +25,21 @@ width: 12rem;
 }
 
 .card{
-  /* background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0) 0%, rgba(255,255,255,0.27244401178440125) 60%, rgba(255,255,255,1) 100%); */
 
-  /* background-image: linear-gradient(to bottom, #1a195f, #322f70, #484581, #5e5c91, #7574a2); */
-  /* background:#113f5d; */
-  /* background-color: #292A5C; */
   background-color: #8bc5ecf5;
   background-image: linear-gradient(135deg, #ffffff58 0%, #1761eaf5 100%);
-    
-  
-  
   
   }
   .botn:hover .sp{
     right: 8px;
     transition: all .2s ease-in;
+  }
+
+  @media(max-width:768px){
+    .card:hover .hide{
+      height: 16rem;
+width: 10.2rem;
+
+    }
   }
 
