@@ -4,7 +4,6 @@ import { useFetch } from '../hooks/useFetch';
 import Icon from '../imgs/book.png'
 import IconMob from '../imgs/viber_image_2022-08-29_19-29-34-622.png'
 import { Link } from 'react-router-dom';
-import { bgcolor } from '@mui/system';
 import './Cardinfo.css'
 const CardInfo = () => {
     const {id}=useParams();
@@ -35,13 +34,13 @@ const CardInfo = () => {
 <div  className='bg-[#fff] flex flex-col align-middle justify-center  lg:w-[20rem] h-[100vh] md:w-[20rem]   w-full absolute left-5 top-0 z-50'>
 
 <div className=' absolute top-4 left-2'>
-<Link to='/'><img src={Icon} alt="" className='ml-8  w-[3rem]' /></Link>
+<Link to='/library'><img src={Icon} alt="" className='ml-8  w-[3rem]' /></Link>
 <p className='text-[#1a195f] text-[1.3rem] font-[700]'>AVIBOOKS</p>
 </div>
 
 
 
-{data&&<img className=' mt-[6rem] ml-[17%]  w-[13rem] rounded-sm' src={data.volumeInfo.imageLinks && data.volumeInfo.imageLinks.smallThumbnail} alt="" />}
+{data&&<img className=' mt-[6rem] ml-[17%]  w-[13rem] rounded-sm' src={data.volumeInfo.imageLinks && data.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000")} alt="" />}
 
 <button className='bg-[#1A195F] w-[10rem]  p-1 m-1 mt-5 mx-auto text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] '>Read</button>
 <button className='bg-[#ffff] w-[8rem]  p-1 m-2  mx-auto text-[#1A195F] font-medium rounded-full  border-solid border-2 border-[#1a195f93] hover:text-[#ffff] hover:bg-[#1a195fb5]'>Buy</button>
