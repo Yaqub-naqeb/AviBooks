@@ -6,8 +6,7 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 export default function ActionAreaCard(item) {
 
-  //  d.volumeInfo.imageLinks &&
-  // d.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000")
+  
 
 //image url
 let image=item.item.volumeInfo.imageLinks && item.item.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000");

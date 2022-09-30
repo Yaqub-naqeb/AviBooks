@@ -94,10 +94,12 @@ const signInWithGoogle=()=>{
        
     
        {/* logo */}
+
    <div className='absolute lg:top-5 lg:left-10 top-3 left-2 '>
    <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
+
    {/* ///////////////////////////////// */}
    
    <div className='lg:pt-[10rem] md:pt-[0rem] lg:mt-0 md:mt-[-3rem] mt-[-3rem]  flex flex-col lg:gap-9 gap-5  text-center'>

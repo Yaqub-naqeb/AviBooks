@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Icon from '../../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
+import Img from '../../components/imgs/book.png'
+
 import Facebook from '../../components/imgs/social/facebook.png'
 import LinkedIn from '../../components/imgs/social/linkedin.png'
 import Google from '../../components/imgs/social/google-plus.png'
@@ -10,7 +12,7 @@ import useTheme from '../../components/store/useTheme'
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 import { useNavigate } from 'react-router-dom'
-
+import '../../App.css'
 
 
 
@@ -67,31 +69,18 @@ const SignUp = () => {
 
 
     
-
-    
-       
-    
+const [logo,setLogo]=useState(false);
 
 
-    // 
-
-
-// const subHandler=(e)=>{
-// e.preventDefault();
-//   Email('');
-//   Password('');
-//   Name('');
-
-// }
 
 
 
   return (
     <div>
 {/* All */}
-<div className='
+<div className={`
 overflow-x-hidden
-flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh] w-[full]'>
+flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh] w-[full]`}>
     
 {/* left */}
 
@@ -101,8 +90,8 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
     
        {/* logo */}
        <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
-   <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
-   <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
+   <Link to='/'><img src={`${Img}`} alt="" className='  iconn ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
+   <p className='text-[#1A195F] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700] avi '>AVIBOOKS</p>
    </div>
 {/*  */}
 

@@ -1,7 +1,8 @@
 import React from 'react'
 import '../App.css'
-import Image from '../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
+import Icon from '../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const Home = () => {
   const Navigate=useNavigate('');
   return (
@@ -28,17 +29,11 @@ const Home = () => {
       
     </div>
     
-{/* Logo */}
-    <div className='lg:w-fit w-10  absolute 
-     lg:left-9 lg:top-5 
-    top-3 left-2
-
-
-      flex flex-col gap-2 align-middle justify-center  '>
-    <img className={'w-[4rem] ml-6'} src={Image} alt="lkj"  />
-     <p className='text-[#fff] lg:text-[1.5rem] text-[1.2rem] font-[700]'>AVIBOOKS</p>
-
-    </div>
+  {/* logo */}
+  <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
+   <Link to='/'><img src={Icon} alt="" className='ml-7  w-[2rem] lg:w-[3.4rem] ' /></Link>
+   <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
+   </div>
 
 
      <h1 className='

@@ -90,7 +90,7 @@ data.volumeInfo.title}</div>
 
 <div className='   mb hidden bg-[#fff] w-full h-full overflow-x-hidden'>
 
-<div className=' absolute pt-2 pl-2 bg-[#1A195F] w-full '>
+<div className=' absolute md:-translate-y-10 pb-2 pt-2 pl-2 bg-[#1A195F] w-full '>
 <Link to='/library'><img src={IconMob}  alt="" className='ml-8  w-[2rem]' /></Link>
 <p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]'>AVIBOOKS</p>
 </div>
@@ -101,10 +101,10 @@ data.volumeInfo.title}</div>
 
 {data&& <>
 
-  <p className='text-[1.5rem] text-center text-[#1a195fd5] px-5  pt-[10rem] font-medium'>{
+  <p className='text-[1.5rem] text-center text-[#1a195fd5]  pr-5  pt-[10rem] font-medium'>{
 data.volumeInfo.title}</p>
 
-{data&&<img className=' mt-[3rem] ml-[30%]  w-[11rem] rounded-sm' src={data.volumeInfo.imageLinks && data.volumeInfo.imageLinks.smallThumbnail} alt="" />}
+{data&&<img className=' mt-[3rem] md:ml-[38%] ml-[30%]  w-[11rem] rounded-sm' src={data.volumeInfo.imageLinks && data.volumeInfo.imageLinks.smallThumbnail} alt="" />}
 {/* btn */}
 <div className='flex flex-col w-full align-middle justify-center gap-3 mt-5 mr-8'>
 <button className='bg-[#1A195F] w-[10rem]  p-1 m-1  mx-auto text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] '>Read</button>
@@ -112,7 +112,7 @@ data.volumeInfo.title}</p>
 </div>
 
 
-<div className='pl-6 pt-5 flex flex-col gap-2 align-middle justify-center'>
+<div className='pl-6 pt-5 flex flex-col md:px-[7rem] px-5 gap-2 align-middle justify-center text-justify'>
 {data.volumeInfo.authors && <p> <strong className='text-[#1A195F]'>Author:</strong> <span className='text-[#1a195fc9]'>{data.volumeInfo.authors}</span> </p>}
 
 {data.volumeInfo.categories &&  <p> <strong className='text-[#1A195F]'>
