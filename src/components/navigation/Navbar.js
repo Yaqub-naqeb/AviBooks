@@ -55,6 +55,10 @@ SignUp
 </div>
 
       </div>
+
+
+
+      
 {/* mobile */}
 
 
@@ -68,7 +72,6 @@ SignUp
 </svg>
 }
 </button>
-{/* ///////////////////// */}
 {/* div batar */}
 
     {/* containari navaka */}

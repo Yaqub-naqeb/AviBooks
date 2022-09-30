@@ -2,7 +2,6 @@
 
     .con{
         display: block;
-        /* transition: all 2s ease-in-out; */
         overflow-x: hidden;
 
     }
@@ -44,6 +43,3 @@ font-weight: bolder;
 
 
 
-/* .active{
-    text-decoration: underline;
-} */

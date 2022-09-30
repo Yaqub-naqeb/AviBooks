@@ -5,24 +5,18 @@ import SignUp from '../pages/form/SignUp'
 import {
     BrowserRouter as Router,
     Routes,
-    Route,
-  HashRouter} from "react-router-dom";
+    Route} from "react-router-dom";
 import Navbar from '../components/navigation/Navbar';
 import CardInfo from '../components/cards/CardInfo';
 import Login from './form/Login';
-import useTheme from '../components/store/useTheme';
   
 const Main = () => {
 
-// const {idd,ID}=useTheme();
-// console.log(idd);
   return (
     <div>
       
 
 <Router> 
-
-
 <Navbar/>
 
  <Routes>
