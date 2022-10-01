@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
   const Navigate=useNavigate('');
   return (
-
+// ksfdjl
   <div id='home'>
 
 <div className=' bg-[#2c3562]   opacity-[0.9] '>
