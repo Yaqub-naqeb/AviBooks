@@ -54,7 +54,7 @@ setSrch('');
    onChange={e=>{setSrch(e.target.value)}}
    value={srch}
    onKeyDown={onKeyHandler}
-   type="text" className=' rounded-md p-1 pl-8'   
+   type="text" className=' rounded-md p-1 pl-5'   
    
    placeholder=' Search'
    

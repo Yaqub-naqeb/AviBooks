@@ -5,6 +5,7 @@ import Icon from '../imgs/book.png'
 import IconMob from '../imgs/viber_image_2022-08-29_19-29-34-622.png'
 import { Link } from 'react-router-dom';
 import './Cardinfo.css'
+import { useNavigate } from 'react-router-dom';
 const CardInfo = () => {
     const {id}=useParams();
 
@@ -13,7 +14,7 @@ const CardInfo = () => {
     
       const { data} = useFetch(url);
 
-
+const Navigate=useNavigate('');
 
 
       
@@ -34,8 +35,9 @@ const CardInfo = () => {
 <div  className='bg-[#fff] flex flex-col align-middle justify-center  lg:w-[20rem] h-[100vh] md:w-[20rem]   w-full absolute left-5 top-0 z-50'>
 
 <div className=' absolute top-4 left-2'>
-<Link to='/library'><img src={Icon} alt="" className='ml-8  w-[3rem]' /></Link>
+<Link to='/library'><img src={Icon} alt="" className='ml-8  w-[3rem]' />
 <p className='text-[#1a195f] text-[1.3rem] font-[700]'>AVIBOOKS</p>
+</Link>
 </div>
 
 
@@ -91,8 +93,8 @@ data.volumeInfo.title}</div>
 <div className='   mb hidden bg-[#fff] w-full h-full overflow-x-hidden'>
 
 <div className=' absolute md:-translate-y-10 pb-2 pt-2 pl-2 bg-[#1A195F] w-full '>
-<Link to='/library'><img src={IconMob}  alt="" className='ml-8  w-[2rem]' /></Link>
-<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]'>AVIBOOKS</p>
+<img src={IconMob} onClick={()=>Navigate('/library')}  alt="" className='ml-8  w-[2rem]' />
+<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]  w-fit '>AVIBOOKS</p>
 </div>
 
 
