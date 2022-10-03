@@ -94,15 +94,26 @@ data.volumeInfo.title}</div>
 {/* mobile */}
 
 <div className='   mb hidden bg-[#fff] w-full h-full overflow-x-hidden'>
-
+{/*  */}
 <div
-onClick={()=>{Navigate('/library')
-setOpen(true)
-}}
 
 className=' absolute md:-translate-y-10 pb-2 pt-2 pl-2 bg-[#1A195F] w-full '>
-<img src={IconMob}    alt="" className='ml-8  w-[2rem]' />
-<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]  w-fit '>AVIBOOKS</p>
+  <div
+ 
+  >
+<img  src={IconMob} 
+ onClick={()=>{Navigate('/library')
+ setOpen(true)
+ }}
+
+alt="" className='ml-8  w-[2rem]' />
+<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]  w-fit '
+ onClick={()=>{Navigate('/library')
+ setOpen(true)
+ }}
+
+>AVIBOOKS</p>
+</div>
 </div>
 
 

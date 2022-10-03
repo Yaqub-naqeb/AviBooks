@@ -54,7 +54,7 @@ const Home = () => {
     absolute lg:right-[20%] lg:left-auto md:left-[15%] left-[2.4rem] top-[40%]
     text-[#ffffffe4] lg:text-[5rem] lg:font-semibold md:text-[3.5rem] text-[2.1rem]  font-bold z-50'>Discover your root...</h1> 
 {/* Botton */}
-<button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[33%] bottom-[40%]
+<button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[33%] bottom-[37%]
     text-[#4240AE]  lg:pl-5 lg:pr-10 lg:py-4
     
     md:pl-5 md:pr-10 md:py-4
