@@ -8,7 +8,7 @@ import { useFetch } from '../components/hooks/useFetch';
 import Searchbar from '../components/searchbar/Searchbar'
 import { Link } from 'react-router-dom';
 const Library = () => {
-    const {search,book,NumBooks}=useTheme();
+    const {search,book,NumBooks,setOpen}=useTheme();
   
     
     const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}+terms&maxResults=${book}
@@ -37,7 +37,7 @@ const Library = () => {
 
        {/* logo */}
        <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
-   <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
+   <Link to='/' onClick={()=>setOpen(true)}><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
 {/*  */}

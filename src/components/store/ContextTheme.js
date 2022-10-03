@@ -14,6 +14,8 @@ case 'CHANGE_PASSWORD':
 return {...state,pass:action.payload};
 case 'CHANGE_EMAIL':
 return {...state,em:action.payload};
+case 'CHANGE_NAV':
+return {...state,open:action.payload};
       default:
       return state;
 
@@ -28,7 +30,9 @@ search:'books',
 book:15,
 pass:'',
 em:'',
-nm:''
+nm:'',
+open:true,
+
   });
 
 
@@ -60,6 +64,10 @@ const Name=(nm)=>{
   distpatch({type:'CHANGE_NAME',payload:nm});
 }
 //
+const setOpen=(open)=>{
+  distpatch({type:'CHANGE_NAV',payload:open});
+
+}
 
 
 
@@ -70,7 +78,7 @@ const Name=(nm)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,Password,Email,Name}}>
+    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,Password,Email,Name,setOpen}}>
       {props.children}
     </themeContext.Provider>
   );

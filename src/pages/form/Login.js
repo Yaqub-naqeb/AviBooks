@@ -8,10 +8,13 @@ import Google from '../../components/imgs/social/google-plus.png'
 import {auth} from '../../components/firebase/Configure'
 import { GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
+import useTheme from '../../components/store/useTheme'
 
 
 
 const Login = () => {
+    const {setOpen}=useTheme();
+
 
     const Navigate=useNavigate('');
     const [email,setEmail]=useState('');
@@ -22,27 +25,27 @@ console.log(user);
 
     onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)})
   
-  const log=async()=>{
+//   const log=async()=>{
   
   
-    try{
+//     try{
       
       
-      const user=await signInWithEmailAndPassword(auth,email,password)
+//       const user=await signInWithEmailAndPassword(auth,email,password)
   
   
-      setEmail('');
-  setPassword('');
-    console.log(user);
-    }catch(err){
-  console.log(err.message);
+//       setEmail('');
+//   setPassword('');
+//     console.log(user);
+//     }catch(err){
+//   console.log(err.message);
   
   
   
-    }
+//     }
   
   
-  }
+//   }
       
 
 
@@ -96,7 +99,7 @@ const signInWithGoogle=()=>{
        {/* logo */}
 
    <div className='absolute lg:top-5 lg:left-10 top-3 left-2 '>
-   <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
+   <Link to='/' onClick={()=>setOpen(true)}><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
 
@@ -123,7 +126,7 @@ const signInWithGoogle=()=>{
       <input onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
       <input onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
    
-      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]' onClick={log}>Log In</button></form>
+      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'  >Log In</button></form>
    
    </div>
    

@@ -4,12 +4,14 @@ import {FavoriteBorderSharp } from '@mui/icons-material'
 import '../../App.css'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import useTheme from '../store/useTheme';
 
 
 
 
 const NewCard = (item) => {
 
+  const {setOpen}=useTheme();
 
 
 //image url
@@ -51,7 +53,7 @@ rounded-md'>
     h-[16rem]  ' />
 
   {/* hidden */}
-  <HashLink to={`/cardinfo/${id}`} smooth
+  <HashLink onClick={()=>setOpen(true)} to={`/cardinfo/${id}`} smooth
 
  className=' absolute top-1 lg:right-2 md:right-2 right-1  hide rounded-md opacity-[0]
   lg:w-[11rem] lg:h-[15rem]
@@ -60,7 +62,7 @@ rounded-md'>
   text-center '>
 
 
-<div    className={'font-medium absolute lg:left-[1.3rem] md:left-[1.3rem] left-[.5rem] top-[40%]  '}>
+<div     className={'font-medium absolute lg:left-[1.3rem] md:left-[1.3rem] left-[.5rem] top-[40%]  '}>
 Explore The Book
 </div>
  

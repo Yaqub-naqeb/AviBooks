@@ -3,8 +3,11 @@ import '../App.css'
 import Icon from '../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import useTheme from '../components/store/useTheme'
 const Home = () => {
   const Navigate=useNavigate('');
+  const {setOpen}=useTheme();
+
   return (
 // ksfdjl
   <div id='home'>
@@ -56,7 +59,11 @@ const Home = () => {
     
     md:pl-5 md:pr-10 md:py-4
     pl-3 pr-8 py-[1rem]
-    bg-white font-bold ' onClick={()=>{Navigate('/library')}}>Explore Book <span className='sp'><svg className='absolute sp   right-3
+    bg-white font-bold ' onClick={()=>{
+      Navigate('/library') 
+      setOpen(true)
+ 
+  }}>Explore Book <span className='sp'><svg className='absolute sp   right-3
      lg:w-5 lg:h-5 
      md:w-5 md:h-5
      w-4 h-4

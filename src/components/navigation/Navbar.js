@@ -1,11 +1,13 @@
 
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import useTheme from '../store/useTheme';
 import './Nav.css'
 const Navbar = () => {
 
 
-const [open,setOpen]=useState(true);
+// const [open,setOpen]=useState(true);
+const {setOpen,open}=useTheme();
 
 
 
