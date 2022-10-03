@@ -6,6 +6,7 @@ const Cards = (data) => {
   return (
     //All Cards
     <div className='
+    
     lg:grid lg:grid-cols-5  
     md:grid md:grid-cols-3  md:gap-x-[4rem] 
     grid grid-cols-2 gap-x-[2rem] 

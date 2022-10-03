@@ -23,6 +23,8 @@ const Library = () => {
    md:pt-[14rem]
    pt-[10rem]
    w-full
+   h-full
+   fixed
   overflow-x-hidden
    
     lg:px-[12rem] 
@@ -30,7 +32,7 @@ const Library = () => {
     px-[1rem]
     md:p-[8rem]   lg:py-[10rem] 
 
-    relative bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
+     bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
      <Searchbar/>
      
 
