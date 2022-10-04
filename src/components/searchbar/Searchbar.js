@@ -43,7 +43,7 @@ setSrch('');
     <div>
  
 
-<div className='flex relative w-fit ml-[3%] 
+<div className='flex relative w-fit ml-[0%] 
  md:ml-[30%] lg:ml-[40%] 
  mt-5rem
    align-middle justify-center gap-4 '>
@@ -54,11 +54,16 @@ setSrch('');
    onChange={e=>{setSrch(e.target.value)}}
    value={srch}
    onKeyDown={onKeyHandler}
-   type="text" className=' rounded-md p-1 pl-5'   
+   type="text" className=' rounded-md 
+    lg:pl-7
+  py-1 md:pl-6
+  pl-7
+
+  
+   '   
+   placeholder='search'
    
-   placeholder=' Search'
-   
-  />
+  /> 
   
 
 <select className='bg-transparent font-bold text-white  w-[5rem]' onChange={e=>searchBooks(e.target.value)}>

@@ -8,7 +8,7 @@ import { useFetch } from '../components/hooks/useFetch';
 import Searchbar from '../components/searchbar/Searchbar'
 import { Link } from 'react-router-dom';
 const Library = () => {
-    const {search,book,NumBooks,setOpen}=useTheme();
+    const {search,book,NumBooks,setOpen,open}=useTheme();
   
     
     const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}+terms&maxResults=${book}
@@ -18,21 +18,19 @@ const Library = () => {
 
 
   return (
-    <div id='library' className='
+    <div id='library' className={`
    lg:pt-[10rem]
    md:pt-[14rem]
    pt-[10rem]
    w-full
    h-full
-   fixed
   overflow-x-hidden
-   
     lg:px-[12rem] 
     md:px-[3rem]
     px-[1rem]
     md:p-[8rem]   lg:py-[10rem] 
-
-     bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]' >
+${open?'':'fixed'}
+     bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]`} >
      <Searchbar/>
      
 
