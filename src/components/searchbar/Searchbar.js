@@ -43,7 +43,7 @@ setSrch('');
     <div>
  
 
-<div className='flex relative w-fit ml-[0%] 
+<div className='flex relative w-fit ml-[-5%] 
  md:ml-[30%] lg:ml-[40%] 
  mt-5rem
    align-middle justify-center gap-4 '>
