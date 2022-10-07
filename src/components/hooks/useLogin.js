@@ -19,7 +19,8 @@ const login=async(email,password)=>{
      //disptach logout
     
      distpatch({type:'LOGIN',payload:res.user})
-
+     setIsPending(false)
+     setError(null)
      //update state
      if(!isCancelled){
         setIsPending(false)

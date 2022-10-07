@@ -23,6 +23,8 @@ const Login = () => {
     const handleSubmit=(e)=>{
         e.preventDefault()
         login(email,password)
+        setEmail('')
+        setPassword('')
     }
 
 
@@ -90,14 +92,15 @@ const Login = () => {
    {/* inputs */}
    <form onSubmit={handleSubmit} className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
      
-      <input onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-      <input onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+      <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+      <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
    {/* buton */}
       {/* <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'  >Log In</button> */}
       {/* btn */}
 {!isPending && <Btn nm='Log In'/>}
 
 {isPending&& <Btn nm='loading'/>}
+
 {error&& <p>{error}</p>}
 
       

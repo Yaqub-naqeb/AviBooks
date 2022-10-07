@@ -31,11 +31,14 @@ console.log(res.user);
 
 //dispatch 
 distpatch({type:'LOGIN',payload:res.user});
+setIsPending(false)
+setError(null)
      //update state
      if(!isCancelled){
         setIsPending(false)
         setError(null)
      }
+
 
 }catch(err){
 if(!isCancelled){
