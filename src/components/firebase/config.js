@@ -1,7 +1,6 @@
-import firebase from "firebase/app";
-
-import 'firebase/firestore'
-
+import firebase from "firebase/compat/app";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAJxX8rNDty5vVYcDEW50hRpew-U4aWAyE",
@@ -18,5 +17,5 @@ firebase.initializeApp(firebaseConfig)
 //init serbices
 const projectFirestore=firebase.firestore();
 const projectAuth=firebase.auth();
-export{projectFirestore,projectAuth}
+export {projectFirestore,projectAuth}
 

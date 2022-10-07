@@ -4,8 +4,16 @@ export const themeContext = createContext();
 const themeReducer = (state, action) => {
   switch (action.type) {
   
+
+case 'LOGIN':
+  return {...state,user:action.payload};
+  case 'LOGOUT':
+    return {...state,user:null}
+  // new
+
     case "CHANGE_MODE":
       return { ...state, mode: action.payload };
+
 case'CHANGE_SEARCH':
 return {...state,search:action.payload};
 case'CHANGE_NUMBOOKS':
@@ -25,6 +33,9 @@ return {...state,open:action.payload};
 export function ContextTheme(props) {
   const [state, distpatch] = useReducer(themeReducer, {
    
+
+user:null,
+
     mode: "bg-gray-900",
 search:'books',
 book:15,
@@ -33,8 +44,9 @@ em:'',
 nm:'',
 open:true,
 
-  });
 
+  });
+console.log('AuthContext state:',state);
 
 //
   const colorMode = (mode) => {
@@ -78,7 +90,7 @@ const setOpen=(open)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state, colorMode,searchBooks,NumBooks,Password,Email,Name,setOpen}}>
+    <themeContext.Provider value={{ ...state,distpatch, colorMode,searchBooks,NumBooks,Password,Email,Name,setOpen}}>
       {props.children}
     </themeContext.Provider>
   );

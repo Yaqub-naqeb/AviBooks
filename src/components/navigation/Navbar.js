@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
+import useLogout from '../hooks/useLogout';
 import useTheme from '../store/useTheme';
 import './Nav.css'
 const Navbar = () => {
@@ -8,7 +9,7 @@ const Navbar = () => {
 
 // const [open,setOpen]=useState(true);
 const {setOpen,open}=useTheme();
-
+const {logout}=useLogout();
 
 
 
@@ -127,6 +128,17 @@ onClick={()=>{setOpen(!open)}}
  to="/signup"
 
  >Sign Up</NavLink> </li>
+
+
+ <li> <NavLink
+ onClick={logout}
+
+   className={ ({isActive})=>{
+    return isActive ? ' navvv':{}
+  }  }
+ to="/signup"
+
+ >Logout</NavLink> </li>
 </ul>
 
 </div>

@@ -4,14 +4,10 @@ import Icon from '../../components/imgs/viber_image_2022-08-29_19-29-34-622.png'
 import Facebook from '../../components/imgs/social/facebook.png'
 import LinkedIn from '../../components/imgs/social/linkedin.png'
 import Google from '../../components/imgs/social/google-plus.png'
-
-import {auth} from '../../components/firebase/Configure'
-import { GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import useTheme from '../../components/store/useTheme'
-
-
-
+import {useLogin} from '../../components/hooks/useLogin'
+import Btn from './Btn'
 const Login = () => {
     const {setOpen}=useTheme();
 
@@ -19,45 +15,16 @@ const Login = () => {
     const Navigate=useNavigate('');
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState();
-    const [user,setUser]=useState({
-    });
-console.log(user);
+    const [user,setUser]=useState({});
 
-    onAuthStateChanged(auth,(currentUser)=>{setUser(currentUser)})
-  
-//   const log=async()=>{
-  
-  
-//     try{
-      
-      
-//       const user=await signInWithEmailAndPassword(auth,email,password)
-  
-  
-//       setEmail('');
-//   setPassword('');
-//     console.log(user);
-//     }catch(err){
-//   console.log(err.message);
-  
-  
-  
-//     }
-  
-  
-//   }
-      
+    const {login , error,isPending}=useLogin();
 
 
+    const handleSubmit=(e)=>{
+        e.preventDefault()
+        login(email,password)
+    }
 
-    //google
-const signInWithGoogle=()=>{
-    const Provider=new GoogleAuthProvider();
-    signInWithPopup(auth,Provider).then((re)=>{
-        console.log(re);
-    }).catch((err)=>{
-        console.log(err);
-    })}
 
 
   return (
@@ -113,7 +80,7 @@ const signInWithGoogle=()=>{
         gap-4'>
        <img src={Facebook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 '} alt="Facebook" />
        <img src={LinkedIn} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt='LinkedIn' />
-       <img onClick={signInWithGoogle} src={Google} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
+       <img  src={Google} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
        </div>
    
        <p className='text-[#1a195faa] font-[400] text-[.9rem] md:text-[1.2rem] lg:text-[1.2rem]'>or use your email account</p>
@@ -121,12 +88,21 @@ const signInWithGoogle=()=>{
    
    
    {/* inputs */}
-   <form className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
+   <form onSubmit={handleSubmit} className='flex flex-col gap-7 align-middle justify-center pl-[20%]'>
      
       <input onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
       <input onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-   
-      <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'  >Log In</button></form>
+   {/* buton */}
+      {/* <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'  >Log In</button> */}
+      {/* btn */}
+{!isPending && <Btn nm='Log In'/>}
+
+{isPending&& <Btn nm='loading'/>}
+{error&& <p>{error}</p>}
+
+      
+      
+      </form>
    
    </div>
    
