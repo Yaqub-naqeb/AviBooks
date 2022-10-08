@@ -177,6 +177,23 @@ onClick={()=>{setOpen(!open)}}
 
 {user && (
   <>
+
+<li> <NavLink
+ onClick={logout}
+
+   className={ ({isActive})=>{
+    return isActive ? ' navvv':{}
+  }  }
+ to="/adding"
+
+ >AddingBooks</NavLink> </li>
+ 
+ 
+
+
+
+
+
    <li> <NavLink
  onClick={logout}
 
@@ -185,7 +202,10 @@ onClick={()=>{setOpen(!open)}}
   }  }
  to="/signup"
 
- >Logout</NavLink> </li></>
+ >Logout</NavLink> </li>
+ 
+
+ </>
 )}
 </ul>
 

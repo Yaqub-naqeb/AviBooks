@@ -1,48 +1,47 @@
-import React from 'react'
-import Home from './Home'
-import Library from './Library'
-import SignUp from '../pages/form/SignUp'
-import { useAuthContext } from '../components/store/useAuthContext'
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route} from "react-router-dom";
-    import { Navigate } from 'react-router-dom'
-import Navbar from '../components/navigation/Navbar';
-import CardInfo from '../components/cards/CardInfo';
-import Login from './form/Login';
-  
+import React from "react";
+import Home from "./Home";
+import Library from "./Library";
+import SignUp from "../pages/form/SignUp";
+import { useAuthContext } from "../components/store/useAuthContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+import Navbar from "../components/navigation/Navbar";
+import CardInfo from "../components/cards/CardInfo";
+import Login from "./form/Login";
+import Adding from "./Adding";
+
 const Main = () => {
-  const {authIsReady,user}=useAuthContext();
+  const { authIsReady, user } = useAuthContext();
 
   return (
     <div>
-      
       {authIsReady && (
+        <Router>
+          <Navbar />
 
-   
+          <Routes>
+            <Route path="/" element={<Home />} />
+            
 
-<Router> 
-<Navbar/>
+            <Route path="/library" element={<Library />} />
+            <Route path="/cardinfo/:id" element={<CardInfo />} />
+            <Route
+              path="/signup"
+              element={user ? <Navigate to={"/"} /> : <SignUp />}
+            ></Route>
+            <Route
+              path="/login"
+              element={user ? <Navigate to={"/"} /> : <Login />}
+            ></Route>
 
- <Routes>
- <Route path='/' element={<Home/>}/> 
- 
 
+<Route path="/adding" element={<Adding />} />
 
-  <Route path='/library' element={<Library/>}/>
-  <Route path='/cardinfo/:id'  element={<CardInfo/>} />
-  <Route path='/signup' element={user?<Navigate to={'/'}/>: <SignUp/>} >
- 
-  </Route>
-  <Route path='/login' element={user?<Navigate to={'/'}/>: <Login/>} >
-  </Route>
-  </Routes> 
-
- </Router>
-   )}
+          </Routes>
+        </Router>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Main
+export default Main;
