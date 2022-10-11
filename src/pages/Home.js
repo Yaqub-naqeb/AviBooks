@@ -31,16 +31,10 @@ const Home = () => {
 
       
     </div>
-    
-  {/* logo */}
-  {/* <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
-   <Link to='/'><img src={Icon} alt="" className='ml-7  w-[2rem] lg:w-[3.4rem] ' /></Link>
-   <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
-   </div> */}
 
 
        {/* logo */}
-       <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
+       <div className='absolute z-50 lg:top-5 lg:left-10 top-5 left-4 '>
    <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
