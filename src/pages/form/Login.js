@@ -68,7 +68,7 @@ const Login = () => {
        {/* logo */}
 
    <div className='absolute lg:top-5 lg:left-10 top-5 left-4 '>
-   <Link to='/' onClick={()=>setOpen(true)}><img src={Icon} alt="" className='ml-6 w-[2rem] lg:w-[3rem] ' /></Link>
+   <Link to='/' onClick={()=>setOpen(true)}><img src={Icon} alt="" className='lg:ml-8 md:ml-8  ml-6 w-[2rem] lg:w-[2.8rem] ' /></Link>
    <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
 
