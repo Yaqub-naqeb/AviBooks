@@ -47,10 +47,14 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
 <div className='w-full lg:h-[100vh] h-[60%] bg-white'>
        {/* logo */}
        <div className='absolute z-50 lg:top-5 lg:left-10 top-5 left-4 '>
-   <Link to='/' onClick={()=>setOpen(true)}><img src={`${Img}`} alt="" className='  iconn  ml-8 w-[2.2rem] lg:w-[3rem] ' /></Link>
-   <p className='text-[#1A195F] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700] avi '>AVIBOOKS</p>
+   <Link to='/' onClick={()=>setOpen(true)}><img src={`${Img}`} alt="" className='  iconn md:ml-8 ml-6 lg:ml-8 w-[2.2rem] lg:w-[3rem] ' /></Link>
+   <p className='text-[#1A195F] md:text-[1.2rem] mt-1 text-[1rem] lg:text-[1.3rem] font-[700] avi '>AVIBOOKS</p>
    </div>
 {/*  */}
+
+
+
+
 
 <div className='lg:pt-[10rem] md:pt-[6rem] pt-[5rem]  flex flex-col lg:gap-9 gap-5  text-center'>
     <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Create an account</h1>
