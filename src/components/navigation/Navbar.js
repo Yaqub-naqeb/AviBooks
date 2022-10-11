@@ -69,7 +69,7 @@ SignUp
       
 {/* mobile */}
 
-<div className='hidden con  z-50'>
+<div className='hidden con   z-50 '>
 
   {/* sexat */}
 

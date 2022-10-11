@@ -18,7 +18,7 @@ const NewCard = (item) => {
 let image=item.item.volumeInfo.imageLinks && item.item.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000");
 
 //title url
-let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.substring(0, 15)+
+let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.substring(0, 30)+
 '...'
 
 //id url
@@ -32,7 +32,7 @@ let id=item.item.id;
 <div className=' mx-auto lg:px-2 md:px-2 px-1 pt-1 rounded-md overflow-hidden bg-[#fff]
  lg:h-[19rem] lg:w-[12rem]
  md:h-[19rem] md:w-[12rem]
- w-[10rem] h-[18rem]
+ w-[10.5rem] h-[19rem]
 
  card  relative   text-center  '>
 
@@ -40,7 +40,7 @@ let id=item.item.id;
 <div className='overflow-hidden shadow-lg 
 lg:w-[11rem]
 md:w-[11rem]
-w-[9.5rem] h-[15rem]
+w-[10rem] h-[15rem]
 rounded-md'>
 
 <div className='overflow-hidden'>
@@ -58,7 +58,7 @@ rounded-md'>
  className=' absolute top-1 lg:right-2 md:right-2 right-1  hide rounded-md opacity-[0]
   lg:w-[11rem] lg:h-[15rem]
   md:w-[11rem] md:h-[15rem]
-  w-[9.5rem] h-[15rem]
+  w-[10rem] h-[15rem]
   text-center '>
 
 
@@ -90,7 +90,7 @@ Add to Cart
 
   </div>
 </div>
-<p className='text-center pt-[1rem] z-50 text-[#1A195F] font-bold lg:text-[0.8rem] m '>{title}</p>
+<p className='text-center pt-[1rem] z-50 text-[#1A195F] font-bold lg:text-[0.8rem] m md:text-[0.8rem] text-[0.8rem]'>{title}</p>
 
 
 </div>

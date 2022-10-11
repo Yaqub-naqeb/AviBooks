@@ -12,7 +12,7 @@ const Home = () => {
 // ksfdjl
   <div id='home'>
 
-<div className=' bg-[#2c3562]   opacity-[0.9] '>
+<div className=' bg-[#2c3562]    opacity-[0.9] '>
 {/* backgrond image */}
     <div className='bg-[url("https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")] object-cover mix-blend-overlay
     bg-black w-full  h-[100vh] bg-fx bg-cover bg-no-repeat relative'>
@@ -35,8 +35,8 @@ const Home = () => {
 
        {/* logo */}
        <div className='absolute z-50 lg:top-5 lg:left-10 top-5 left-4 '>
-   <Link to='/'><img src={Icon} alt="" className='ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
-   <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
+   <Link to='/'><img src={Icon} alt="" className='ml-6 w-[2rem] lg:w-[3rem] ' /></Link>
+   <p className='text-[#ffffff] md:text-[1.2rem] mt-1 text-[1rem] lg:text-[1.3rem] font-[700]'>AVIBOOKS</p>
    </div>
 {/*  */}
 

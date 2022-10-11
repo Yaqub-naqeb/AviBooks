@@ -46,7 +46,7 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
 
 <div className='w-full lg:h-[100vh] h-[60%] bg-white'>
        {/* logo */}
-       <div className='absolute z-50 lg:top-5 lg:left-10 top-3 left-2 '>
+       <div className='absolute z-50 lg:top-5 lg:left-10 top-5 left-4 '>
    <Link to='/' onClick={()=>setOpen(true)}><img src={`${Img}`} alt="" className='  iconn ml-8 w-[2rem] lg:w-[3rem] ' /></Link>
    <p className='text-[#1A195F] md:text-[1.2rem] mt-1 text-[1.1rem] lg:text-[1.3rem] font-[700] avi '>AVIBOOKS</p>
    </div>

@@ -97,7 +97,7 @@ data.volumeInfo.title}</div>
 {/*  */}
 <div
 
-className=' absolute md:-translate-y-10 pb-2 pt-2 pl-2 bg-[#1A195F] w-full '>
+className=' absolute md:-translate-y-10 pb-2 pt-4 pl-2 bg-[#1A195F] w-full '>
   <div
  
   >
@@ -107,7 +107,7 @@ className=' absolute md:-translate-y-10 pb-2 pt-2 pl-2 bg-[#1A195F] w-full '>
  }}
 
 alt="" className='ml-8  w-[2rem]' />
-<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]  w-fit '
+<p className='text-[#ffff] ml-2 z-50 text-[1rem] font-[700]  w-fit mt-1 '
  onClick={()=>{Navigate('/library')
  setOpen(true)
  }}
