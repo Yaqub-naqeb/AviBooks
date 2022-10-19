@@ -18,8 +18,35 @@ const NewCard = (item) => {
 let image=item.item.volumeInfo.imageLinks && item.item.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000");
 
 //title url
-let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.substring(0, 30)+
-'...'
+// let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.substring(0, 30)+'...';
+let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.concat(' ');
+
+let trimmedStringg=()=>{
+  var yourString = title; //replace with your string.
+  var maxLength = 40 // maximum number of characters to extract
+  
+  //trim the string to the maximum length
+  var trimmedString = yourString.substring(0, maxLength);
+  
+  //re-trim if we are in the middle of a word
+  trimmedString = trimmedString.substring(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
+
+  if(yourString.length>maxLength){
+    trimmedString=trimmedString.concat('...')
+    }
+
+// console.log(trimmedString.length-1,title.length-1);
+  return trimmedString;
+  
+}
+
+
+
+
+
+
+
+
 
 //id url
 let id=item.item.id;
@@ -90,7 +117,8 @@ Add to Cart
 
   </div>
 </div>
-<p className='text-center pt-[1rem] z-50 text-[#1A195F] font-bold lg:text-[0.8rem] m md:text-[0.8rem] text-[0.8rem]'>{title}</p>
+<p className='text-center pt-[1rem] z-50 text-[#1A195F] font-bold lg:text-[0.8rem] m md:text-[0.8rem] text-[0.8rem]'>{trimmedStringg()}</p>
+{/*  */}
 
 
 </div>

@@ -54,11 +54,13 @@ ${open?'':'fixed'}
 
      {data && <Cards data={data}/>}
 
-
-<button onClick={()=>NumBooks(book+8)} className={' font-medium text-[#ffff] text-[1.2rem] lg:text-[1.4rem] text-center cursor-pointer lg:w-fit w-full lg:ml-[45%] ml-[0%] translate-y-[-5rem]  h-fit'}>see more 
+{data &&
+(<button onClick={()=>NumBooks(book+8)} className={' font-medium text-[#ffff] text-[1.2rem] lg:text-[1.4rem] text-center cursor-pointer lg:w-fit w-full lg:ml-[45%] ml-[0%] translate-y-[-5rem]  h-fit'}>see more 
 <p className='lg:mt-[-1rem] text-white '>. . .</p>
 </button>
+)
 
+}
     
 
     </div>

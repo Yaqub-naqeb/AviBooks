@@ -42,7 +42,7 @@ authIsReady:false,
 
     mode: "bg-gray-900",
 search:'books',
-book:15,
+book:25,
 pass:'',
 em:'',
 nm:'',

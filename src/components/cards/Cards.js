@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css'
 import NewCard from './NewCard'
 const Cards = (data) => {
-
+  console.log(data.data)
   return (
     //All Cards
     <div className='
@@ -15,6 +15,7 @@ text-white
    justify-center
     '>
    {
+    
     data.data && data.data.items.map((item)=><NewCard key={item.id} item={item}/>)
     
    }
