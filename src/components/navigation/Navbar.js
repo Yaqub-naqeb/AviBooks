@@ -170,7 +170,7 @@ onClick={()=>{setOpen(!open)}}
   <>
 
 <li> <NavLink
- onClick={logout}
+
 
    className={ ({isActive})=>{
     return isActive ? ' navvv':{}
