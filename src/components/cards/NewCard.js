@@ -18,7 +18,7 @@ const NewCard = (item) => {
 let image=item.item.volumeInfo.imageLinks && item.item.volumeInfo.imageLinks.thumbnail.concat("&fife=w700-h1000");
 
 //title url
-// let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.substring(0, 30)+'...';
+
 let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.concat(' ');
 
 let trimmedStringg=()=>{
