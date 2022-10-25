@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import useLogout from '../hooks/useLogout';
 import useTheme from '../store/useTheme';
@@ -22,14 +22,26 @@ console.log(user);
 
   return (
     <div>
-      <nav>
+      <nav >
       {/* desctop */}
 
 
-      <div className='desc z-50 p-3 rounded-full absolute  right-[4%] top-[36px] 
+      <div className={`desc z-50 p-3 rounded-full absolute  right-[4%] top-[36px] 
       bg-[#ffff] text-[#1a195f]
-      font-medium w-[30rem] text-[20px]'>
-<div className='  flex gap-4 w-full ml-[15%]'>
+      font-medium w-[30rem] text-[20px]`}>
+<div className={`  flex gap-4 w-full ${!user?'ml-[15%]':'ml-[8%] '}`}>
+
+{/* user profile */}
+{user && (<Link to={'/profile'} className={' text-white absolute left-[-8rem] top-[0.5rem] '}>
+<p className='mr-[1rem]   flex gap-1 text-center text-[1rem] md:text-[1.2rem] align-middle '><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4 md:w-10 md:h-10   ">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+</svg>
+
+<span className='self-center'>{user.displayName}</span>
+
+</p>
+</Link>)}
+
 <NavLink
 className={  ({isActive})=>{
   return isActive ? 'underline navv':{}
@@ -46,6 +58,12 @@ className={  ({isActive})=>{
 smooth to={'/library'}>
 Library
 </NavLink>
+
+{/* agar user nabu awa login signup */}
+
+
+{!user && (<>
+
 <NavLink 
 className={  ({isActive})=>{
   return isActive ? 'underline navv':{}
@@ -60,10 +78,32 @@ className={  ({isActive})=>{
 to={'/signup'}>
 SignUp
 </NavLink>
+</>
+)}
+{/* agar user nabu awa login signup */}
 
+
+{user && (<>
+
+<NavLink 
+className={  ({isActive})=>{
+  return isActive ? 'underline navv':{}
+}  }
+to={'/adding'}>
+Adding book
+</NavLink>
+<NavLink
+onClick={logout}
+className={  ({isActive})=>{
+  return isActive ? 'underline navv':{}
+}  }
+to={'/signup'}>
+Logout
+</NavLink>
+</>
+)}
 </div>
-
-      </div>
+  </div>
 
 
 
@@ -78,11 +118,11 @@ SignUp
   { open ? <div className='flex'>
 {/* user profile */}
     {user && (<Link to={'/profile'}>
-<p className='mr-[1rem]  flex gap-1 text-center text-[1rem] md:text-[1.2rem] align-middle justify-center'><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7 md:w-10 md:h-10 ">
+<p className='mr-[1rem]  flex gap-1 text-center text-[1rem] md:text-[1.2rem] align-middle justify-center'><svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7  ">
   <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
 </svg>
 
-{user.displayName}
+<span className='self-center'>{user.displayName}</span>
 
 </p>
 </Link>)}
