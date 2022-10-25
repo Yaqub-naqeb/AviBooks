@@ -10,7 +10,6 @@ import CardInfo from "../components/cards/CardInfo";
 import Login from "./form/Login";
 import Adding from "./Adding";
 import Profile from "./profile/Profile";
-
 const Main = () => {
   const { authIsReady, user } = useAuthContext();
 
@@ -38,6 +37,8 @@ const Main = () => {
 
 <Route path="/adding" element={<Adding />} />
 <Route path="/profile" element={<Profile />} />
+
+
 
           </Routes>
         </Router>

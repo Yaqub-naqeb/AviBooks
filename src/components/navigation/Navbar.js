@@ -9,12 +9,10 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
 
 
-// const [open,setOpen]=useState(true);
 const {setOpen,open}=useTheme();
 const {logout}=useLogout();
 const {user}=useAuthContext();
 console.log(user);
-
 
 
 
@@ -93,11 +91,8 @@ to={'/adding'}>
 Adding book
 </NavLink>
 <NavLink
-onClick={logout}
-className={  ({isActive})=>{
-  return isActive ? 'underline navv':{}
-}  }
-to={'/signup'}>
+onClick={logout }
+to={'/'}>
 Logout
 </NavLink>
 </>
