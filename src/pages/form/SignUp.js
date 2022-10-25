@@ -22,6 +22,7 @@ const SignUp = () => {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState();
     const [displayName,setDisplayName]=useState('');
+    // const [phone,setPhone]=useState('');
     
 
 const {signup,isPending,error}=useSignup();
@@ -82,6 +83,9 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
    <input  
    value={password}
    type="password" onChange={(e)=>setPassword(e.target.value)}  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
+   {/* <input  
+   value={phone}
+   type="tel" onChange={(e)=>setPhone(e.target.value)}  placeholder='Phone number' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/> */}
 
 {/* btn */}
 {!isPending && <Btn nm='Sign Up'/>}

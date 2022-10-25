@@ -9,7 +9,7 @@ import Navbar from "../components/navigation/Navbar";
 import CardInfo from "../components/cards/CardInfo";
 import Login from "./form/Login";
 import Adding from "./Adding";
-
+import Profile from "./profile/Profile";
 const Main = () => {
   const { authIsReady, user } = useAuthContext();
 
@@ -27,15 +27,18 @@ const Main = () => {
             <Route path="/cardinfo/:id" element={<CardInfo />} />
             <Route
               path="/signup"
-              element={user ? <Navigate to={"/"} /> : <SignUp />}
+              element={user ? <Navigate to={"/profile"} /> : <SignUp />}
             ></Route>
             <Route
               path="/login"
-              element={user ? <Navigate to={"/"} /> : <Login />}
+              element={user ? <Navigate to={"/profile"} /> : <Login />}
             ></Route>
 
 
 <Route path="/adding" element={<Adding />} />
+<Route path="/profile" element={<Profile />} />
+
+
 
           </Routes>
         </Router>
