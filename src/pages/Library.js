@@ -27,7 +27,7 @@ const Library = () => {
   overflow-x-hidden
     lg:px-[12rem] 
     md:px-[3rem]
-    px-[1rem]
+    px-auto
     md:p-[8rem]   lg:py-[10rem] 
 ${open?'':'fixed'}
      bg-[#1A195F]  lg:overflow-hidden text-center flex flex-col gap-[10rem]`} >
