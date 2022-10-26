@@ -12,6 +12,8 @@ const {addDoc,response}=useFirestore('transactions');
 
      const submitHandler=(e)=>{
         e.preventDefault();
+console.log(uid);
+
         addDoc({
           uid,
           title,author,gener,Price,describe
@@ -22,6 +24,7 @@ setGener('')
 setPrice('')
 setDescribe('')
  setAuthor('')
+
 
      }
 
