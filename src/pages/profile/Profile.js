@@ -7,7 +7,7 @@ const Profile = () => {
   return (
     <div>
       {/* 3am */}
- 
+ {/* ayy */}
       <div className='bg-[#1A195F] h-[100vh] py-[50%] lg:py-[15%] md:py-[40%] '>
         {/* profile picture */}
         <div>
@@ -22,6 +22,7 @@ const Profile = () => {
 </svg>
 
 @{user.displayName}
+
 
 </p>}
       
