@@ -105,11 +105,14 @@ Logout
       
 {/* mobile */}
 
-<div className='hidden con   z-50 '>
+<div className='hidden con   z-50  '>
+
+{/* <div className={` 
+          bg-[#070707fc] h-[100vh] absolute w-[100%] z-30   `}>l</div> */}
 
   {/* sexat */}
 
-<button className={`mob bg-current  hidden btn absolute  right-5  md:top-7 top-8   `} >
+<button className={`mob bg-current    hidden btn absolute  right-5  md:top-7 top-8   `} >
   { open ? <div className='flex'>
 {/* user profile */}
     {user && (<Link to={'/profile'}>
@@ -141,8 +144,20 @@ Logout
 {/* div batar */}
 
     {/* containari navaka */}
-    <div className={`contnav
+
+
+
+    {/* <div className={` 
+        ${open ? '' : 'transition-all opacity-100 duration-500  w-[100%] ' } z-0  bg-[#0707078f] h-[100vh] absolute    `}></div> */}
+
+    
+
+   
+
+
+    <div className={`contnav 
         ${open ? 'opacity-0 w-[10%] ' : 'transition-all opacity-100 duration-500 w-[50%] -right-1' }  bg-[#1e1e62d2] backdrop-blur-xl  text-[#FFFFFF]  h-[100vh] absolute  pt-[6rem] `}>
+
 
 
 
@@ -264,6 +279,7 @@ onClick={()=>{setOpen(!open)}}
 
 
       </nav>
+    
     </div>
   )
 }
