@@ -221,6 +221,7 @@ onClick={()=>{setOpen(!open)}}
   <>
 
 <li> <NavLink
+ onClick={()=>{setOpen(!open)}}
 
 
    className={ ({isActive})=>{
@@ -247,6 +248,7 @@ onClick={()=>{setOpen(!open)}}
 
  
    <li> <NavLink
+ onClick={()=>{setOpen(!open)}}
 
    className={ ({isActive})=>{
     return isActive ? ' navvv':{}

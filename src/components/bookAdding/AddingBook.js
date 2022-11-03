@@ -35,7 +35,8 @@ setDescribe('')
 
 
     <div className='h-[100vh]'>
-      <form  onSubmit={submitHandler} className={`bg-gray-400 flex flex-col px-10 p-[10px] mx-5 align-middle justify-center`}>
+      
+      <form  onSubmit={submitHandler} className={`bg-gray-400 flex flex-col px-10 p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem] align-middle justify-center`}>
 
 <input
 
