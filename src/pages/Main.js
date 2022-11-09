@@ -10,6 +10,7 @@ import CardInfo from "../components/cards/CardInfo";
 import Login from "./form/Login";
 import Adding from "./Adding";
 import Profile from "./profile/Profile";
+import Footer from "./footer/Footer";
 const Main = () => {
   const { authIsReady, user } = useAuthContext();
 
@@ -41,6 +42,7 @@ const Main = () => {
 
 
           </Routes>
+          <Footer/>
         </Router>
       )}
     </div>
