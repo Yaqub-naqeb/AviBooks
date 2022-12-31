@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Footer = () => {
 const Navigate =useNavigate('');
   return (
-    <div className='h-[20vh] bg-[white] my-auto flex justify-around '>
+    <div className='h-[20vh] bg-[#20245720] my-auto flex justify-around '>
    {/* 3am */}
    <div className=' self-center'>
     <img src={Img} className={`w-[3rem]   `} alt="" />

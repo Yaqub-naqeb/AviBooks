@@ -36,11 +36,11 @@ setDescribe('')
 
     <div className='h-[100vh]'>
       
-      <form  onSubmit={submitHandler} className={`bg-gray-400 flex flex-col px-10 p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem] align-middle justify-center`}>
+      <form   onSubmit={submitHandler} className={`bg-[#282f8cb0] rounded-lg flex flex-col  justify-center align-middle shadow-lg px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem]`}>
 
 <input
 
-className='  my-3  border'
+className='    border'
 
 
 onChange={(e)=>setTitle(e.target.value)}
@@ -62,7 +62,7 @@ type="" placeholder='Select genres' />
 
 
 <input
-className='  my-3  border'
+className=' w-[full]  my-3  border'
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
@@ -76,7 +76,7 @@ value={describe}
 name="" placeholder='Description of the book' id="" cols="20" rows="5"></textarea>
 
 
-<button >
+<button className='px-[1rem] mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl' >
     Add Book
 </button>
 
