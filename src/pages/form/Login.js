@@ -8,7 +8,10 @@ import { useNavigate } from 'react-router-dom'
 import useTheme from '../../components/store/useTheme'
 import {useLogin} from '../../components/hooks/useLogin'
 import Btn from './Btn'
+import { getAuth, GoogleAuthProvider, ProviderId, signInWithPopup } from 'firebase/auth'
 const Login = () => {
+    const provider = new GoogleAuthProvider();
+
     const {setOpen}=useTheme();
 
 
@@ -25,6 +28,32 @@ const Login = () => {
         login(email,password)
         setEmail('')
         setPassword('')
+    }
+
+
+
+    const auth = getAuth();
+
+
+    // sign up with google pop up
+    const signInWithpopupp=()=>{
+signInWithPopup(auth, provider)
+  .then((result) => {
+    
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    const email = error.customData.email;
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+
     }
 
 
@@ -82,7 +111,7 @@ const Login = () => {
         gap-4'>
        <img src={Facebook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 '} alt="Facebook" />
        <img src={LinkedIn} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt='LinkedIn' />
-       <img  src={Google} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
+       <img onClick={signInWithpopupp}  src={Google} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
        </div>
    
        <p className='text-[#1a195faa] font-[400] text-[.9rem] md:text-[1.2rem] lg:text-[1.2rem]'>or use your email account</p>
