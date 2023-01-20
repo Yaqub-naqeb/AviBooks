@@ -8,21 +8,17 @@ import { useNavigate } from 'react-router-dom'
 import useTheme from '../../components/store/useTheme'
 import {useLogin} from '../../components/hooks/useLogin'
 import Btn from './Btn'
-import { getAuth, GoogleAuthProvider, ProviderId, signInWithPopup } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 const Login = () => {
     const provider = new GoogleAuthProvider();
 
     const {setOpen}=useTheme();
-
-
     const Navigate=useNavigate('');
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState();
-    const [user,setUser]=useState({});
-
     const {login , error,isPending}=useLogin();
 
-
+// when click submit form 
     const handleSubmit=(e)=>{
         e.preventDefault()
         login(email,password)
@@ -31,20 +27,20 @@ const Login = () => {
     }
 
 
-
+//geting the auth
     const auth = getAuth();
-
-
     // sign up with google pop up
     const signInWithpopupp=()=>{
+
 signInWithPopup(auth, provider)
   .then((result) => {
-    
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     // The signed-in user info.
+    console.log(token);
     const user = result.user;
     // ...
+    console.log(user);
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
