@@ -76,7 +76,7 @@ value={describe}
 name="" placeholder='Description of the book' id="" cols="20" rows="5"></textarea>
 
 
-<button className='px-[1rem] mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl' >
+<button className='px-[1rem] mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out' >
     Add Book
 </button>
 
