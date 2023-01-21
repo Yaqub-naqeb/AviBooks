@@ -107,9 +107,6 @@ Logout
 
 <div className='hidden con   z-50  '>
 
-{/* <div className={` 
-          bg-[#070707fc] h-[100vh] absolute w-[100%] z-30   `}>l</div> */}
-
   {/* sexat */}
 
 <button className={`mob bg-current    hidden btn absolute  right-5  md:top-7 top-8   `} >
@@ -146,21 +143,8 @@ Logout
     {/* containari navaka */}
 
 
-
-    {/* <div className={` 
-        ${open ? '' : 'transition-all opacity-100 duration-500  w-[100%] ' } z-0  bg-[#0707078f] h-[100vh] absolute    `}></div> */}
-
-    
-
-   
-
-
     <div className={`contnav 
         ${open ? 'opacity-0 w-[10%] ' : 'transition-all opacity-100 duration-500 w-[50%] -right-1' }  bg-[#1e1e62d2] backdrop-blur-xl  text-[#FFFFFF]  h-[100vh] absolute  pt-[6rem] `}>
-
-
-
-
 
 <ul className='  flex  flex-col gap-5  justify-center align-middle text-center mt-[12%] font-semibold text-[poppins]'>
  <li> <NavLink
@@ -230,12 +214,6 @@ onClick={()=>{setOpen(!open)}}
  to="/adding"
 
  >AddingBooks</NavLink> </li>
- 
- 
-
-
-
-
    <li> <Link
  onClick={logout}
  to="/"

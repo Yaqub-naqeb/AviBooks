@@ -8,7 +8,7 @@ const AddingBook = ({uid}) => {
      const [gener,setGener]=useState('')
      const [Price,setPrice]=useState();
      const [describe,setDescribe]=useState('');
-const {addDoc,response}=useFirestore('transactions');
+const {addDoc}=useFirestore('transactions');
 
      const submitHandler=(e)=>{
         e.preventDefault();

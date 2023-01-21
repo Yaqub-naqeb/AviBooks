@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
 // ksfdjl
-  <div id='home'>
+  <div id='home' className=' '>
 
 <div className=' bg-[#2c3562]    opacity-[0.9] '>
 {/* backgrond image */}
@@ -21,17 +21,8 @@ const Home = () => {
        <div className='absloute  bottom-0 sm:w-[500px] lg:w-[1020.05px] lg:h-[437.39px] w-[450px] h-[200px] top-[159.57px] bg-[#202161ca]  lg:rotate-[-33.58deg] rotate-[-42.58deg] translate-x-[-32%] translate-y-[-45%]' >
    
        </div>
-
-         
-
-       {/* nusin */}
-
-
-
-
-      
+       {/* nusin */}  
     </div>
-
 
        {/* logo */}
        <div className='absolute z-50 lg:top-5 lg:left-10 top-5 left-4 '>
@@ -40,12 +31,7 @@ const Home = () => {
    </div>
 {/*  */}
 
-
-
-
-
-     <h1 className='
-    absolute lg:right-[20%] lg:left-auto md:left-[15%] left-[2.4rem] top-[40%]
+ <h1 className='absolute lg:right-[20%] lg:left-auto md:left-[15%] left-[2.4rem] top-[40%]
     text-[#ffffffe4] lg:text-[5rem] lg:font-semibold md:text-[3.5rem] text-[2.1rem]  font-bold z-50'>Discover your root...</h1> 
 {/* Botton */}
 <button className=' botn absolute  lg:left-[48%] md:left-[40%] md:bottom-[40%] rounded-full  lg:bottom-[28%] left-[33%] bottom-[37%]
@@ -55,9 +41,7 @@ const Home = () => {
     pl-3 pr-8 py-[1rem]
     bg-white font-bold ' onClick={()=>{
       Navigate('/library') 
-      setOpen(true)
- 
-  }}>Explore Book <span className='sp'><svg className='absolute sp   right-3
+      setOpen(true) }}>Explore Book <span className='sp'><svg className='absolute sp   right-3
      lg:w-5 lg:h-5 
      md:w-5 md:h-5
      w-4 h-4
@@ -66,8 +50,6 @@ const Home = () => {
   </svg></span>
   </button>
     </div>
-
-
     </div>
    
   )
