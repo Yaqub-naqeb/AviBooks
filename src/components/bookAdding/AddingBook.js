@@ -34,39 +34,41 @@ setDescribe('')
 
 
 
-    <div className='h-[100vh]'>
+    <div className='h-[100vh] font-medium'>
       
-      <form   onSubmit={submitHandler} className={`bg-[#282f8cb0] rounded-lg flex flex-col  justify-center align-middle shadow-lg px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem]`}>
-
+      <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem]`}>
+{/* inputs  */}
+{/* title */}
 <input
 
-className='    border'
+className='    border rounded-sm'
 
 
 onChange={(e)=>setTitle(e.target.value)}
 value={title}
 
 type="Name" placeholder='Book Title' required/>
-
+{/* author */}
 <input
-className='  my-3  border'
+className='  my-3  border rounded-sm'
 
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
 type="" placeholder='Author' />
 <input
+className='rounded-sm'
 onChange={(e)=>setGener(e.target.value)}
 value={gener} 
 
-type="" placeholder='Select genres' />
-
+type="" placeholder='Select genres ' />
+{/* select genres */}
 
 <input
-className=' w-[full]  my-3  border'
+className=' w-[full]  my-3  border rounded-sm'
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
-
+{/* discriptions */}
 <textarea
 className='  my-3  border'
 
