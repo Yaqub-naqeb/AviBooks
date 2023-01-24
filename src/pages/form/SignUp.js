@@ -9,7 +9,6 @@ import useTheme from '../../components/store/useTheme'
 
 import { useNavigate } from 'react-router-dom'
 import '../../App.css'
-// import { auth } from '../../components/firebase/config'
 import { useSignup } from '../../components/hooks/useSignup'
 import Btn from './Btn'
 import { signInWithPopup, GoogleAuthProvider,FacebookAuthProvider, getAuth } from "firebase/auth";
@@ -31,7 +30,6 @@ import { signInWithPopup, GoogleAuthProvider,FacebookAuthProvider, getAuth } fro
       setEmail('')
       setPassword('')
     }
-    // const auth = getAuth();
     // sign up with google pop up
     const signInWithpopupp=()=>{
 signInWithPopup(auth, provider)
@@ -80,11 +78,6 @@ const signInWithFaceBook=()=>{
   });
 }
 
-
-
-
-
-
   return (
     <div>
 {/* All */}
@@ -112,10 +105,10 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
 
     <div className='flex w-full align-middle justify-center
      gap-4'>
-    <img src={Facebook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 '} alt="Facebook" onClick={signInWithFaceBook} />
+    <img src={Facebook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 cursor-pointer '} alt="Facebook" onClick={signInWithFaceBook} />
 
-    <img src={LinkedIn} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt='LinkedIn' />
-    <img src={Google} onClick={signInWithpopupp}  className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
+    <img src={LinkedIn} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 cursor-pointer '} alt='LinkedIn' />
+    <img src={Google} onClick={signInWithpopupp}  className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 cursor-pointer '} alt="Twitter" />
     </div>
 
     <p className='text-[#1a195faa] font-[400] text-[.9rem] md:text-[1.2rem] lg:text-[1.2rem]'>or use your email account</p>
