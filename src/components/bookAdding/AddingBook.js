@@ -41,7 +41,7 @@ setDescribe('')
 {/* title */}
 <input
 
-className='  py-2  border rounded-sm shadow-lg'
+className='  py-2 cursor-pointer  border rounded-sm shadow-lg'
 
 
 onChange={(e)=>setTitle(e.target.value)}
@@ -50,7 +50,7 @@ value={title}
 type="Name" placeholder='Book Title' required/>
 {/* author */}
 <input
-className=' py-2 my-3  border rounded-sm shadow-lg'
+className=' py-2 my-3 cursor-pointer  border rounded-sm shadow-lg'
 
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
@@ -65,13 +65,13 @@ type="" placeholder='Select genres ' />
 {/* select genres */}
 
 <input
-className=' w-[full] py-2 my-3  border rounded-sm shadow-lg'
+className=' w-[full] py-2 my-3 cursor-pointer border rounded-sm shadow-lg'
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
 {/* discriptions */}
-<textarea
-className=' py-2 my-3  border shadow-lg'
+<textarea 
+className=' py-2 my-3 cursor-pointer border shadow-lg'
 
 onChange={(e)=>setDescribe(e.target.value)}
 value={describe}
@@ -80,7 +80,7 @@ name="" placeholder='Description of the book' id="" cols="20" rows="5"></textare
 
 
 <div className='flex gap-5'>
-<button className='px-[1rem] mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
+<button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
     Add book
 </button>
 

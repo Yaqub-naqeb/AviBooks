@@ -118,7 +118,7 @@ flex lg:flex-nowrap md:flex-wrap-reverse flex-wrap-reverse  bg-gray-500 h-[100vh
     </div>
 
     <p className='text-[#1a195faa] font-[400] text-[.9rem] md:text-[1.2rem] lg:text-[1.2rem]'>or use your email account</p>
-
+{/*  */}
 
 
 {/* inputs */}

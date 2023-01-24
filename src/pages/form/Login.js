@@ -135,6 +135,7 @@ const signInWithFaceBook=()=>{
    </div>
 
    {/* ///////////////////////////////// */}
+   {/* kljffd */}
    
    <div className='lg:pt-[10rem] md:pt-[0rem] lg:mt-0 md:mt-[-3rem] mt-[-3rem]  flex flex-col lg:gap-9 gap-5  text-center'>
        <h1 className='font-[700] md:text-[2rem] text-[1.2rem] lg:text-[3rem] text-[#1A195F]'>Log in to avibooks</h1>
