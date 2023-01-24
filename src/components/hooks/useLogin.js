@@ -1,6 +1,6 @@
 import  { useEffect } from 'react'
 import { useState } from 'react'
-import { projectAuth } from '../firebase/config'
+import { auth } from '../firebase/config'
 import { useAuthContext } from '../store/useAuthContext'
 
 export const useLogin = () => {
@@ -15,7 +15,7 @@ const login=async(email,password)=>{
     setIsPending(true);
     //sign The use out
     try{
-    const res= await projectAuth.signInWithEmailAndPassword(email,password)
+    const res= await auth.signInWithEmailAndPassword(email,password)
      //disptach logout
     
      distpatch({type:'LOGIN',payload:res.user})

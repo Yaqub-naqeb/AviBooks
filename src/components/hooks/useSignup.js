@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {projectAuth} from '../firebase/config'
+import {auth} from '../firebase/config'
 import {useAuthContext}from '../store/useAuthContext'
 
 
@@ -21,7 +21,7 @@ const signup=async (email,password,displayName)=>{
 try{
     //signup user
 
-const res=await projectAuth.createUserWithEmailAndPassword(email,password);
+const res=await auth.createUserWithEmailAndPassword(email,password);
 if(!res){
     throw new Error('could not complete signup')
 }

@@ -17,10 +17,10 @@ firebase.initializeApp(firebaseConfig)
 
 //init serbices
 const projectFirestore=firebase.firestore();
-const projectAuth=firebase.auth();
+const auth=firebase.auth();
 
 //timestamp
   const timestamp=firebase.firestore.Timestamp
 
-export {projectFirestore,projectAuth,timestamp}
+export {projectFirestore,auth,timestamp}
 

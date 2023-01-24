@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useReducer } from "react";
-import {projectAuth} from '../firebase/config'
+import {auth} from '../firebase/config'
 export const themeContext = createContext();
 
 const themeReducer = (state, action) => {
@@ -51,7 +51,7 @@ open:true,
 
   });
 useEffect(()=>{
-  const unsub=projectAuth.onAuthStateChanged((user)=>{
+  const unsub=auth.onAuthStateChanged((user)=>{
     distpatch({type:'AUTH_IS_READY',payload:user})
     unsub()
   })
