@@ -13,7 +13,6 @@ case 'LOGIN':
     case 'AUTH_IS_READY':
       return {...state,user:action.payload,authIsReady:true}
   // new
-
     case "CHANGE_MODE":
       return { ...state, mode: action.payload };
 
@@ -27,6 +26,8 @@ case 'CHANGE_EMAIL':
 return {...state,em:action.payload};
 case 'CHANGE_NAV':
 return {...state,open:action.payload};
+case 'CHANGE_USER':
+return {...state,user:action.payload};
       default:
       return state;
 
@@ -91,6 +92,12 @@ const setOpen=(open)=>{
   distpatch({type:'CHANGE_NAV',payload:open});
 
 }
+// 
+
+const setUser=(user)=>{
+  distpatch({type:'CHANGE_USER'});
+}
+
 
 
 
@@ -101,7 +108,7 @@ const setOpen=(open)=>{
 
 
   return (
-    <themeContext.Provider value={{ ...state,distpatch, colorMode,searchBooks,NumBooks,Password,Email,Name,setOpen}}>
+    <themeContext.Provider value={{ ...state,distpatch,setUser, colorMode,searchBooks,NumBooks,Password,Email,Name,setOpen}}>
       {props.children}
     </themeContext.Provider>
   );

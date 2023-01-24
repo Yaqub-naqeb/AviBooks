@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Img from '../../components/imgs/book.png'
-
 import Facebook from '../../components/imgs/social/facebook.png'
 import LinkedIn from '../../components/imgs/social/linkedin.png'
 import Google from '../../components/imgs/social/google-plus.png'
 import useTheme from '../../components/store/useTheme'
-
 import { useNavigate } from 'react-router-dom'
 import '../../App.css'
 import { useSignup } from '../../components/hooks/useSignup'
 import Btn from './Btn'
 import { signInWithPopup, GoogleAuthProvider,FacebookAuthProvider, getAuth } from "firebase/auth";
+import { useAuthContext } from '../../components/store/useAuthContext'
+
 
     const SignUp = () => {
+      const [loggin,setLoggin]=useState(null)
+      const {user}=useAuthContext();
+
+console.log(user);
     const auth=getAuth();
     const provider = new GoogleAuthProvider();
-    const {setOpen}=useTheme();
+    const {setOpen,setUser}=useTheme();
     const Navigate=useNavigate('');
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState();
@@ -28,7 +32,7 @@ import { signInWithPopup, GoogleAuthProvider,FacebookAuthProvider, getAuth } fro
       signup(email,password,displayName)
       setDisplayName('')
       setEmail('')
-      setPassword('')
+      setPassword('')  
     }
     // sign up with google pop up
     const signInWithpopupp=()=>{
@@ -39,6 +43,7 @@ signInWithPopup(auth, provider)
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    // setUser(user);
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -60,8 +65,8 @@ const signInWithFaceBook=()=>{
   signInWithPopup(auth, Fb_provider)
   .then((result) => {
     const user = result.user;
-    console.log(user);
 
+// setUser(user)
     const credential = FacebookAuthProvider.credentialFromResult(result);
     const accessToken = credential.accessToken;
 
@@ -79,7 +84,8 @@ const signInWithFaceBook=()=>{
 }
 
   return (
-    <div>
+  <>
+  {user ? 'hi' : <div>
 {/* All */}
 <div className={`
 overflow-x-hidden
@@ -172,7 +178,9 @@ object-cover   bg-cover bg-no-repeat
       </div>
       </div>
 
-
+}
+  
+  </>
 
 
   )

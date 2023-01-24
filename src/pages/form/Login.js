@@ -8,7 +8,8 @@ import { useNavigate } from 'react-router-dom'
 import useTheme from '../../components/store/useTheme'
 import {useLogin} from '../../components/hooks/useLogin'
 import Btn from './Btn'
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { FacebookAuthProvider, getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
+import { usePopUp } from '../../components/hooks/usePopUp'
 const Login = () => {
     const provider = new GoogleAuthProvider();
 
@@ -17,6 +18,8 @@ const Login = () => {
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState();
     const {login , error,isPending}=useLogin();
+     const {loggin}=usePopUp();
+
 
 // when click submit form 
     const handleSubmit=(e)=>{
@@ -34,13 +37,14 @@ const Login = () => {
 
 signInWithPopup(auth, provider)
   .then((result) => {
+    loggin();
     const credential = GoogleAuthProvider.credentialFromResult(result);
     const token = credential.accessToken;
     // The signed-in user info.
-    console.log(token);
+    
     const user = result.user;
     // ...
-    console.log(user);
+
   }).catch((error) => {
     // Handle Errors here.
     const errorCode = error.code;
@@ -51,6 +55,39 @@ signInWithPopup(auth, provider)
   });
 
     }
+
+
+    
+// facebook
+const signInWithFaceBook=()=>{
+    const Fb_provider = new FacebookAuthProvider();
+  
+    signInWithPopup(auth, Fb_provider)
+    .then((result) => {
+      const user = result.user;
+  
+  // setUser(user)
+      const credential = FacebookAuthProvider.credentialFromResult(result);
+      const accessToken = credential.accessToken;
+  
+    })
+    .catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      const credential = FacebookAuthProvider.credentialFromError(error);
+  
+    });
+  }
+  
+
+
+
+
+
 
 
 
@@ -105,7 +142,7 @@ signInWithPopup(auth, provider)
    
        <div className='flex w-full align-middle justify-center
         gap-4'>
-       <img src={Facebook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 '} alt="Facebook" />
+       <img src={Facebook} onClick={signInWithFaceBook} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem]     hover:-translate-y-2 transition-all duration-100 '} alt="Facebook" />
        <img src={LinkedIn} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt='LinkedIn' />
        <img onClick={signInWithpopupp}  src={Google} className={'lg:w-[3rem] md:w-[3rem] w-[2rem] lg:h-[3rem] md:h-[3rem]  h-[2rem] hover:-translate-y-2 transition-all duration-100 '} alt="Twitter" />
        </div>
@@ -119,8 +156,7 @@ signInWithPopup(auth, provider)
      
       <input value={email} onChange={(e)=>{setEmail(e.target.value)}} type="email"  placeholder='Email Address' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
       <input value={password} onChange={(e)=>{setPassword(e.target.value)}} type="password"  placeholder='Password' className='border-b-2 outline-none placeholder:text-[#1a195f7c] w-[80%]  border-[#1A195F]'/>
-   {/* buton */}
-      {/* <button className='bg-[#1A195F]  lg:w-[10rem] md:w-[10rem] w-[5rem]  lg:p-2 md:p-2 p-[.2rem]  mx-auto  text-[#fff] font-medium rounded-full hover:text-[#ffff] hover:bg-[#1a195fb5] border-solid border-2 border-[#1a195f93] -translate-x-8 md:-translate-x-16  lg:-translate-x-12 md:text-[1rem] text-[.8rem] lg:text-[1rem]'  >Log In</button> */}
+  
       {/* btn */}
 {!isPending && <Btn nm='Log In'/>}
 
