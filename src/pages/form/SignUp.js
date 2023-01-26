@@ -35,8 +35,8 @@ console.log(user);
       setPassword('')  
     }
     // sign up with google pop up
-    const signInWithpopupp=()=>{
-signInWithPopup(auth, provider)
+    const signInWithpopupp= async()=>{
+await signInWithPopup(auth, provider)
   .then((result) => {
     
     const credential = GoogleAuthProvider.credentialFromResult(result);
