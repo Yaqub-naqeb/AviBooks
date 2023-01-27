@@ -34,9 +34,9 @@ setDescribe('')
 
 
 
-    <div className='h-[100vh] font-medium'>
+    <div className='h-[100vh] font-medium md:mt-[3rem] lg:mt-[0rem] mt-[3rem]'>
       
-      <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] `}>
+      <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg  lg:px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] `}>
 {/* inputs  */}
 {/* title */}
 <input
