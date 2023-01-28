@@ -36,7 +36,7 @@ setDescribe('')
 
     <div className='h-[100vh] font-medium md:mt-[3rem] lg:mt-[0rem] mt-[3rem]'>
       
-      <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg  lg:px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] `}>
+      <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg  lg:px-[10rem] p-[10px] mx-5 lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] gap-3 `}>
 {/* inputs  */}
 {/* title */}
 <input
@@ -79,7 +79,7 @@ value={describe}
 name="" placeholder='Description of the book' id="" cols="20" rows="5"></textarea>
 
 
-<div className='flex gap-5'>
+<div className='flex gap-5 self-center'>
 <button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
     Add book
 </button>
