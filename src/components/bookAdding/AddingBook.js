@@ -41,7 +41,7 @@ setDescribe('')
 {/* title */}
 <input
 
-className=' pl-3  py-2 cursor-pointer  border rounded-sm shadow-lg'
+className=' pl-3  py-2 cursor-pointer  border rounded-lg shadow-lg'
 
 
 onChange={(e)=>setTitle(e.target.value)}
@@ -50,7 +50,7 @@ value={title}
 type="Name" placeholder='Book Title' required/>
 {/* author */}
 <input
-className=' pl-3 py-2 my-3 cursor-pointer  border rounded-sm shadow-lg'
+className=' pl-3 py-2 my-3 cursor-pointer  border rounded-lg shadow-lg'
 
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
@@ -65,13 +65,13 @@ type="" placeholder='Select genres ' />
 {/* select genres */}
 
 <input
-className='pl-3 w-[full] py-2 my-3 cursor-pointer border rounded-sm shadow-lg'
+className='pl-3 w-[full] py-2 my-3 cursor-pointer border rounded-lg shadow-lg'
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
 {/* discriptions */}
 <textarea 
-className='pl-3 py-2 my-3 cursor-pointer border shadow-lg'
+className='pl-3 py-2 my-3 rounded-lg cursor-pointer border shadow-lg'
 
 onChange={(e)=>setDescribe(e.target.value)}
 value={describe}
@@ -86,7 +86,7 @@ name="" placeholder='Description of the book' id="" cols="20" rows="5"></textare
 
 </div>
 
-
+{/*TODO:you need some cleaning code */}
 
 
 
