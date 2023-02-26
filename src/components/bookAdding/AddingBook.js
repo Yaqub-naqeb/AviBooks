@@ -30,10 +30,6 @@ setDescribe('')
 
 
   return (
-
-
-
-
     <div className='h-[100vh] font-medium md:mt-[3rem] lg:mt-[0rem] mt-[3rem] '>
       
       <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg  lg:px-[10rem] p-[10px] mx-5 md:mx-[2rem] lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] gap-3 md:px-5`}>
@@ -41,7 +37,7 @@ setDescribe('')
 {/* title */}
 <input
 
-className=' pl-3  py-2 cursor-pointer  border rounded-lg shadow-lg'
+className=' pl-3  py-2 cursor-pointer hover:border-[#2C3562]  border rounded-lg shadow-lg'
 
 
 onChange={(e)=>setTitle(e.target.value)}
@@ -50,14 +46,14 @@ value={title}
 type="Name" placeholder='Book Title' required/>
 {/* author */}
 <input
-className=' pl-3 py-2 my-3 cursor-pointer  border rounded-lg shadow-lg'
+className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounded-lg shadow-lg'
 
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
 type="" placeholder='Author' />
 <input
 
-className='pl-3 rounded-sm py-2 shadow-lg'
+className='pl-3 hover:border-[#2C3562] rounded-sm py-2 shadow-lg'
 onChange={(e)=>setGener(e.target.value)}
 value={gener} 
 
@@ -65,13 +61,13 @@ type="" placeholder='Select genres ' />
 {/* select genres */}
 
 <input
-className='pl-3 w-[full] py-2 my-3 cursor-pointer border rounded-lg shadow-lg'
+className='pl-3 hover:border-[#2C3562] w-[full] py-2 my-3 cursor-pointer border rounded-lg shadow-lg'
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
 {/* discriptions */}
 <textarea 
-className='pl-3 py-2 my-3 rounded-lg cursor-pointer border shadow-lg'
+className='pl-3 hover:border-[#2C3562] py-2 my-3 rounded-lg cursor-pointer border shadow-lg'
 
 onChange={(e)=>setDescribe(e.target.value)}
 value={describe}
