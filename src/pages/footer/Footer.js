@@ -31,6 +31,7 @@ const Navigate =useNavigate('');
 </div>
 <div className={`cursor-pointer hover:text-[#1A195F] hover:scale-[1.01] `}><a href="">Github</a>
 </div>
+
   
    </div>
 
