@@ -34,7 +34,7 @@ setDescribe('')
 
       <div className='w-10 h-10 top-0 left-[5rem] absolute bg-black opacity-20 rounded-full'></div>
       <div className='w-10 h-10 top-0 right-[5rem] absolute bg-black opacity-20 rounded-full'></div>
-      
+          
       <form   onSubmit={submitHandler} className={`bg-[#282f8c5a] rounded-lg flex flex-col  justify-center align-middle shadow-lg  lg:px-[10rem] p-[10px] mx-5 md:mx-[2rem] lg:mx-[20rem] lg:mt-[10rem]  py-[4rem] gap-3 md:px-5`}>
 {/* inputs  */}
 {/* title */}
@@ -47,6 +47,16 @@ onChange={(e)=>setTitle(e.target.value)}
 value={title}
 
 type="Name" placeholder='Book Title' required/>
+{/* pages */}
+<input
+
+className=' pl-3  py-2 cursor-pointer hover:border-[#2C3562]  border rounded-lg shadow-lg'
+
+
+onChange={(e)=>setTitle(e.target.value)}
+value={title}
+
+type="Name" placeholder='Book pages' required/>
 {/* author */}
 <input
 className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounded-lg shadow-lg'
