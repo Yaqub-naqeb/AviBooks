@@ -78,24 +78,17 @@ className='pl-3 hover:border-[#2C3562] w-[full] py-2 my-3 cursor-pointer border 
 onChange={(e)=>setPrice(e.target.value)}
 value={Price}
 type="number" placeholder='Price' />
-{/* discriptions */}
-<textarea 
-className='pl-3 hover:border-[#2C3562] py-2 my-3 rounded-lg cursor-pointer border shadow-lg'
-
-onChange={(e)=>setDescribe(e.target.value)}
-value={describe}
-
-name="" placeholder='Description of the book' id="" cols="20" rows="5"></textarea>
-
 
 <div className=' flex gap-5 self-center'>
 <button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
     Add book
 </button>
+<button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
+    Add random book
+</button>
 
 </div>
 
-{/*TODO:you need some cleaning code */}
 
 
 
