@@ -68,16 +68,7 @@ onChange={(e)=>setTitle(e.target.value)}
 value={title}
 
 type="Name" placeholder='Book pages' required/>
-{/* pages */}
-<input
 
-className=' pl-3  py-2 cursor-pointer hover:border-[#2C3562]  border rounded-lg shadow-lg'
-
-
-onChange={(e)=>setTitle(e.target.value)}
-value={title}
-
-type="Name" placeholder='Book pages' required/>
 {/* pages */}
 <input
 
@@ -115,7 +106,9 @@ type="number" placeholder='Price' />
 <button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
     Add book
 </button>
-
+<button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
+    delete book
+</button>
 
 </div>
 
