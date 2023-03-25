@@ -86,6 +86,13 @@ className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounde
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
 type="" placeholder='Author' />
+{/* author */}
+<input
+className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounded-lg shadow-lg'
+
+onChange={(e)=>setAuthor(e.target.value)}
+value={author}
+type="" placeholder='Author' />
 
 <input
 
@@ -106,9 +113,7 @@ type="number" placeholder='Price' />
 <button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
     Add book
 </button>
-<button className='px-[1rem] cursor-pointer mt-10 py-[1rem] text-[#ffff] bg-slate-800 w-[9rem]  text-center flex items-center justify-center align-middle self-center text-xl rounded-md hover:shadow-md hover:bg-slate-700 transition-all duration-300 ease-in-out shadow-lg ' >
-    delete book
-</button>
+
 
 </div>
 
