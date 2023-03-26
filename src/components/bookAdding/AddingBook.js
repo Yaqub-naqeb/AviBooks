@@ -58,6 +58,16 @@ onChange={(e)=>setTitle(e.target.value)}
 value={title}
 
 type="Name" placeholder='created time' required/>
+{/* created time  */}
+<input
+
+className=' pl-3  py-2 cursor-pointer hover:border-[#2C3562]  border rounded-lg shadow-lg'
+
+
+onChange={(e)=>setTitle(e.target.value)}
+value={title}
+
+type="Name" placeholder='created time' required/>
 {/* pages */}
 <input
 
@@ -86,13 +96,7 @@ className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounde
 onChange={(e)=>setAuthor(e.target.value)}
 value={author}
 type="" placeholder='Author' />
-{/* author */}
-<input
-className=' hover:border-[#2C3562] border pl-3 py-2 my-3 cursor-pointer   rounded-lg shadow-lg'
 
-onChange={(e)=>setAuthor(e.target.value)}
-value={author}
-type="" placeholder='Author' />
 
 <input
 
