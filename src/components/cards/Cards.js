@@ -16,7 +16,7 @@ text-white
     '>
    {
     
-    data.data && data.data.items.map((item)=><NewCard key={item.id} item={item}/>)
+    data.data && data.data.items.map((item)=>item.volumeInfo.imageLinks && item.volumeInfo.title&&<NewCard key={item.id} item={item}/>)
     
    }
     </div>

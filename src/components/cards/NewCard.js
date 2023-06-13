@@ -20,9 +20,8 @@ let image=item.item.volumeInfo.imageLinks && item.item.volumeInfo.imageLinks.thu
 //title url
 
 let title=item.item.volumeInfo.imageLinks && item.item.volumeInfo.title.concat(' ');
-
 let trimmedStringg=()=>{
-  var yourString = title; //replace with your string.
+  var yourString =title; //replace with your string.
   var maxLength = 40 // maximum number of characters to extract
   
   //trim the string to the maximum length
@@ -30,7 +29,7 @@ let trimmedStringg=()=>{
   
   //re-trim if we are in the middle of a word
   trimmedString = trimmedString.substring(0, Math.min(trimmedString.length, trimmedString.lastIndexOf(" ")))
-
+console.log(trimmedString);
   if(yourString.length>maxLength){
     trimmedString=trimmedString.concat('...')
     }
@@ -118,6 +117,7 @@ Add to Cart
   </div>
 </div>
 <p className='text-center pt-[1rem] z-50 text-[#1A195F] font-bold lg:text-[0.8rem] m md:text-[0.8rem] text-[0.8rem]'>{trimmedStringg()}</p>
+
 {/*  */}
 
 

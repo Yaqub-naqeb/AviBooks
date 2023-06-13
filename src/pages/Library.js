@@ -14,7 +14,7 @@ const Library = () => {
     const {data}=useFetch(`https://www.googleapis.com/books/v1/volumes?q=${search}+terms&maxResults=${book}
     `)
   
-
+    // console.log(data&&data.volumeInfo.imageLinks && data.volumeInfo.title);
 
 
   return (
